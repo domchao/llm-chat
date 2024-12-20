@@ -1,0 +1,33 @@
+# VSCODE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# vim
+*-
+.*.sw[po]
+
+# MacOS
+.DS_Store
+
+# Environments
+.env
+.venv
+
+# Node packages
+node_modules/
+
+# Django
+*.sqlite3
+*.pyc
+
+# Custom
+tmp/
+scratch/
+staticfiles/

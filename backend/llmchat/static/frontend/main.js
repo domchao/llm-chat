@@ -338,17 +338,17 @@
                 var j = Array.isArray,
                     H =
                         a.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,
-                    V = { pending: !1, data: null, method: null, action: null },
-                    $ = [],
+                    $ = { pending: !1, data: null, method: null, action: null },
+                    V = [],
                     B = -1;
                 function W(e) {
                     return { current: e };
                 }
                 function Q(e) {
-                    0 > B || ((e.current = $[B]), ($[B] = null), B--);
+                    0 > B || ((e.current = V[B]), (V[B] = null), B--);
                 }
                 function q(e, t) {
-                    B++, ($[B] = e.current), (e.current = t);
+                    B++, (V[B] = e.current), (e.current = t);
                 }
                 var K = W(null),
                     Y = W(null),
@@ -394,7 +394,7 @@
                 }
                 function te(e) {
                     Y.current === e && (Q(K), Q(Y)),
-                        X.current === e && (Q(X), (Ff._currentValue = V));
+                        X.current === e && (Q(X), (Ff._currentValue = $));
                 }
                 var ne = Object.prototype.hasOwnProperty,
                     re = r.unstable_scheduleCallback,
@@ -613,15 +613,15 @@
                     Ue = "__reactContainer$" + Fe,
                     je = "__reactEvents$" + Fe,
                     He = "__reactListeners$" + Fe,
-                    Ve = "__reactHandles$" + Fe,
-                    $e = "__reactResources$" + Fe,
+                    $e = "__reactHandles$" + Fe,
+                    Ve = "__reactResources$" + Fe,
                     Be = "__reactMarker$" + Fe;
                 function We(e) {
                     delete e[Me],
                         delete e[Ie],
                         delete e[je],
                         delete e[He],
-                        delete e[Ve];
+                        delete e[$e];
                 }
                 function Qe(e) {
                     var t = e[Me];
@@ -665,10 +665,10 @@
                     throw Error(o(33));
                 }
                 function Ye(e) {
-                    var t = e[$e];
+                    var t = e[Ve];
                     return (
                         t ||
-                            (t = e[$e] =
+                            (t = e[Ve] =
                                 {
                                     hoistableStyles: new Map(),
                                     hoistableScripts: new Map(),
@@ -1275,7 +1275,7 @@
                 var Ut = null,
                     jt = null,
                     Ht = null;
-                function Vt() {
+                function $t() {
                     if (Ht) return Ht;
                     var e,
                         t,
@@ -1288,7 +1288,7 @@
                     for (t = 1; t <= o && n[r - t] === l[a - t]; t++);
                     return (Ht = l.slice(e, 1 < t ? 1 - t : void 0));
                 }
-                function $t(e) {
+                function Vt(e) {
                     var t = e.keyCode;
                     return (
                         "charCode" in e
@@ -1501,7 +1501,7 @@
                                     if ("Unidentified" !== t) return t;
                                 }
                                 return "keypress" === e.type
-                                    ? 13 === (e = $t(e))
+                                    ? 13 === (e = Vt(e))
                                         ? "Enter"
                                         : String.fromCharCode(e)
                                     : "keydown" === e.type || "keyup" === e.type
@@ -1518,7 +1518,7 @@
                             locale: 0,
                             getModifierState: dn,
                             charCode: function (e) {
-                                return "keypress" === e.type ? $t(e) : 0;
+                                return "keypress" === e.type ? Vt(e) : 0;
                             },
                             keyCode: function (e) {
                                 return "keydown" === e.type ||
@@ -1528,7 +1528,7 @@
                             },
                             which: function (e) {
                                 return "keypress" === e.type
-                                    ? $t(e)
+                                    ? Vt(e)
                                     : "keydown" === e.type || "keyup" === e.type
                                       ? e.keyCode
                                       : 0;
@@ -1677,20 +1677,20 @@
                 }
                 function Hn() {
                     On &&
-                        (On.detachEvent("onpropertychange", Vn),
+                        (On.detachEvent("onpropertychange", $n),
                         (Rn = On = null));
                 }
-                function Vn(e) {
+                function $n(e) {
                     if ("value" === e.propertyName && Dn(Rn)) {
                         var t = [];
                         Ln(t, Rn, e, Tt(e)), Dt(An, t);
                     }
                 }
-                function $n(e, t, n) {
+                function Vn(e, t, n) {
                     "focusin" === e
                         ? (Hn(),
                           (Rn = n),
-                          (On = t).attachEvent("onpropertychange", Vn))
+                          (On = t).attachEvent("onpropertychange", $n))
                         : "focusout" === e && Hn();
                 }
                 function Bn(e) {
@@ -2068,14 +2068,14 @@
                     Ur = 0,
                     jr = null,
                     Hr = 1,
-                    Vr = "";
-                function $r(e, t) {
+                    $r = "";
+                function Vr(e, t) {
                     (Ar[Dr++] = Mr), (Ar[Dr++] = Fr), (Fr = e), (Mr = t);
                 }
                 function Br(e, t, n) {
-                    (Ir[Ur++] = Hr), (Ir[Ur++] = Vr), (Ir[Ur++] = jr), (jr = e);
+                    (Ir[Ur++] = Hr), (Ir[Ur++] = $r), (Ir[Ur++] = jr), (jr = e);
                     var r = Hr;
-                    e = Vr;
+                    e = $r;
                     var l = 32 - be(r) - 1;
                     (r &= ~(1 << l)), (n += 1);
                     var a = 32 - be(t) + l;
@@ -2085,11 +2085,11 @@
                             (r >>= o),
                             (l -= o),
                             (Hr = (1 << (32 - be(t) + l)) | (n << l) | r),
-                            (Vr = a + e);
-                    } else (Hr = (1 << a) | (n << l) | r), (Vr = e);
+                            ($r = a + e);
+                    } else (Hr = (1 << a) | (n << l) | r), ($r = e);
                 }
                 function Wr(e) {
-                    null !== e.return && ($r(e, 1), Br(e, 1, 0));
+                    null !== e.return && (Vr(e, 1), Br(e, 1, 0));
                 }
                 function Qr(e) {
                     for (; e === Fr; )
@@ -2100,7 +2100,7 @@
                     for (; e === jr; )
                         (jr = Ir[--Ur]),
                             (Ir[Ur] = null),
-                            (Vr = Ir[--Ur]),
+                            ($r = Ir[--Ur]),
                             (Ir[Ur] = null),
                             (Hr = Ir[--Ur]),
                             (Ir[Ur] = null);
@@ -2174,7 +2174,7 @@
                               (zc("beforetoggle", t), zc("toggle", t)),
                           null != r.onScroll && zc("scroll", t),
                           null != r.onScrollEnd && zc("scrollend", t),
-                          null != r.onClick && (t.onclick = Vc),
+                          null != r.onClick && (t.onclick = $c),
                           (t = !0))
                         : (t = !1),
                         t || Jr(e);
@@ -2415,7 +2415,7 @@
                             4 !== t.tag ||
                             t.stateNode.containerInfo !== n.containerInfo ||
                             t.stateNode.implementation !== n.implementation
-                            ? (((t = Vu(n, e.mode, r)).return = e), t)
+                            ? (((t = $u(n, e.mode, r)).return = e), t)
                             : (((t = l(t, n.children || [])).return = e), t);
                     }
                     function m(e, t, n, r, a) {
@@ -2450,7 +2450,7 @@
                                     );
                                 case s:
                                     return (
-                                        ((t = Vu(t, e.mode, n)).return = e), t
+                                        ((t = $u(t, e.mode, n)).return = e), t
                                     );
                                 case k:
                                     return g(
@@ -2642,7 +2642,7 @@
                                             }
                                             t(f, d), (d = d.sibling);
                                         }
-                                        ((m = Vu(p, f.mode, m)).return = f),
+                                        ((m = $u(p, f.mode, m)).return = f),
                                             (f = m);
                                     }
                                     return i(f);
@@ -2685,7 +2685,7 @@
                                             (f = p);
                                     }
                                     if (d === i.length)
-                                        return n(l, f), Yr && $r(l, d), s;
+                                        return n(l, f), Yr && Vr(l, d), s;
                                     if (null === f) {
                                         for (; d < i.length; d++)
                                             null !== (f = g(l, i[d], u)) &&
@@ -2694,7 +2694,7 @@
                                                     ? (s = f)
                                                     : (c.sibling = f),
                                                 (c = f));
-                                        return Yr && $r(l, d), s;
+                                        return Yr && Vr(l, d), s;
                                     }
                                     for (f = r(f); d < i.length; d++)
                                         null !== (p = v(f, l, d, i[d], u)) &&
@@ -2713,7 +2713,7 @@
                                             f.forEach(function (e) {
                                                 return t(l, e);
                                             }),
-                                        Yr && $r(l, d),
+                                        Yr && Vr(l, d),
                                         s
                                     );
                                 })(f, d, p, m);
@@ -2752,7 +2752,7 @@
                                             (d = m);
                                     }
                                     if (h.done)
-                                        return n(l, d), Yr && $r(l, p), c;
+                                        return n(l, d), Yr && Vr(l, p), c;
                                     if (null === d) {
                                         for (; !h.done; p++, h = u.next())
                                             null !== (h = g(l, h.value, s)) &&
@@ -2761,7 +2761,7 @@
                                                     ? (c = h)
                                                     : (f.sibling = h),
                                                 (f = h));
-                                        return Yr && $r(l, p), c;
+                                        return Yr && Vr(l, p), c;
                                     }
                                     for (d = r(d); !h.done; p++, h = u.next())
                                         null !== (h = v(d, l, p, h.value, s)) &&
@@ -2780,7 +2780,7 @@
                                             d.forEach(function (e) {
                                                 return t(l, e);
                                             }),
-                                        Yr && $r(l, p),
+                                        Yr && Vr(l, p),
                                         c
                                     );
                                 })(f, d, (p = w.call(p)), m);
@@ -2929,14 +2929,14 @@
                             });
                 }
                 var Hl = null,
-                    Vl = 0,
                     $l = 0,
+                    Vl = 0,
                     Bl = null;
                 function Wl() {
-                    if (0 == --Vl && null !== Hl) {
+                    if (0 == --$l && null !== Hl) {
                         null !== Bl && (Bl.status = "fulfilled");
                         var e = Hl;
-                        (Hl = null), ($l = 0), (Bl = null);
+                        (Hl = null), (Vl = 0), (Bl = null);
                         for (var t = 0; t < e.length; t++) (0, e[t])();
                     }
                 }
@@ -2948,8 +2948,8 @@
                         (function (e, t) {
                             if (null === Hl) {
                                 var n = (Hl = []);
-                                (Vl = 0),
-                                    ($l = kc()),
+                                ($l = 0),
+                                    (Vl = kc()),
                                     (Bl = {
                                         status: "pending",
                                         value: void 0,
@@ -2958,7 +2958,7 @@
                                         },
                                     });
                             }
-                            Vl++, t.then(Wl, Wl);
+                            $l++, t.then(Wl, Wl);
                         })(0, t),
                         null !== Ql && Ql(e, t);
                 };
@@ -3026,8 +3026,8 @@
                     )
                         throw Error(o(300));
                     null === e ||
-                        $o ||
-                        (null !== (e = e.dependencies) && Si(e) && ($o = !0));
+                        Vo ||
+                        (null !== (e = e.dependencies) && Si(e) && (Vo = !0));
                 }
                 function da(e, t, n, r) {
                     Zl = e;
@@ -3219,10 +3219,10 @@
                                                 eagerState: c.eagerState,
                                                 next: null,
                                             }),
-                                        d === $l && (f = !0);
+                                        d === Vl && (f = !0);
                                 else {
                                     if ((Xl & p) === p) {
-                                        (c = c.next), p === $l && (f = !0);
+                                        (c = c.next), p === Vl && (f = !0);
                                         continue;
                                     }
                                     (d = {
@@ -3263,7 +3263,7 @@
                         if (
                             (null === s ? (i = a) : (s.next = u),
                             !qn(a, e.memoizedState) &&
-                                (($o = !0), f && null !== (n = Bl)))
+                                ((Vo = !0), f && null !== (n = Bl)))
                         )
                             throw n;
                         (e.memoizedState = a),
@@ -3290,7 +3290,7 @@
                         do {
                             (a = e(a, i.action)), (i = i.next);
                         } while (i !== l);
-                        qn(a, t.memoizedState) || ($o = !0),
+                        qn(a, t.memoizedState) || (Vo = !0),
                             (t.memoizedState = a),
                             null === t.baseQueue && (t.baseState = a),
                             (n.lastRenderedState = a);
@@ -3307,7 +3307,7 @@
                     } else n = t();
                     var i = !qn((Jl || l).memoizedState, n);
                     if (
-                        (i && ((l.memoizedState = n), ($o = !0)),
+                        (i && ((l.memoizedState = n), (Vo = !0)),
                         (l = l.queue),
                         Xa(Na.bind(null, r, l, e), [e]),
                         l.getSnapshot !== t ||
@@ -3561,10 +3561,10 @@
                         [t, n, !1]
                     );
                 }
-                function Va(e) {
-                    return $a(va(), Jl, e);
+                function $a(e) {
+                    return Va(va(), Jl, e);
                 }
-                function $a(e, t, n) {
+                function Va(e, t, n) {
                     (t = Ca(e, t, ja)[0]),
                         (e = Ea(Sa)[0]),
                         (t =
@@ -3594,7 +3594,7 @@
                 function Wa(e) {
                     var t = va(),
                         n = Jl;
-                    if (null !== n) return $a(t, n, e);
+                    if (null !== n) return Va(t, n, e);
                     va(), (t = t.memoizedState);
                     var r = (n = va()).queue.dispatch;
                     return (n.memoizedState = e), [t, r, !1];
@@ -3717,10 +3717,10 @@
                     return qn(n, t)
                         ? n
                         : null !== Sl.current
-                          ? ((e = ao(e, n, r)), qn(e, t) || ($o = !0), e)
+                          ? ((e = ao(e, n, r)), qn(e, t) || (Vo = !0), e)
                           : 42 & Xl
                             ? ((e = Ts()), (Zl.lanes |= e), (cs |= e), t)
-                            : (($o = !0), (e.memoizedState = n));
+                            : ((Vo = !0), (e.memoizedState = n));
                 }
                 function io(e, t, n, r, l) {
                     var a = H.p;
@@ -3796,7 +3796,7 @@
                         e,
                         l,
                         t,
-                        V,
+                        $,
                         null === n
                             ? uo
                             : function () {
@@ -3810,15 +3810,15 @@
                     var n = {};
                     return (
                         ((t = {
-                            memoizedState: V,
-                            baseState: V,
+                            memoizedState: $,
+                            baseState: $,
                             baseQueue: null,
                             queue: {
                                 pending: null,
                                 lanes: 0,
                                 dispatch: null,
                                 lastRenderedReducer: Sa,
-                                lastRenderedState: V,
+                                lastRenderedState: $,
                             },
                             next: null,
                         }).next = {
@@ -4088,7 +4088,7 @@
                         var e = ya(),
                             t = es.identifierPrefix;
                         if (Yr) {
-                            var n = Vr;
+                            var n = $r;
                             (t =
                                 ":" +
                                 t +
@@ -4158,8 +4158,8 @@
                 (_o.useCacheRefresh = ho),
                     (_o.useMemoCache = wa),
                     (_o.useHostTransitionStatus = po),
-                    (_o.useFormState = Va),
-                    (_o.useActionState = Va),
+                    (_o.useFormState = $a),
+                    (_o.useActionState = $a),
                     (_o.useOptimistic = function (e, t) {
                         return Ra(va(), 0, e, t);
                     });
@@ -4377,8 +4377,8 @@
                             });
                         });
                 }
-                var Vo = Error(o(461)),
-                    $o = !1;
+                var $o = Error(o(461)),
+                    Vo = !1;
                 function Bo(e, t, n, r) {
                     t.child =
                         null === e ? wl(t, null, n, r) : kl(t, e.child, n, r);
@@ -4394,7 +4394,7 @@
                         Ei(t),
                         (r = ca(e, t, n, o, a, l)),
                         (i = ma()),
-                        null === e || $o
+                        null === e || Vo
                             ? (Yr && i && Wr(t),
                               (t.flags |= 1),
                               Bo(e, t, r, l),
@@ -4435,10 +4435,10 @@
                         var a = e.memoizedProps;
                         if (Kn(a, r) && e.ref === t.ref) {
                             if (
-                                (($o = !1), (t.pendingProps = r = a), !di(e, l))
+                                ((Vo = !1), (t.pendingProps = r = a), !di(e, l))
                             )
                                 return (t.lanes = e.lanes), fi(e, t, l);
-                            131072 & e.flags && ($o = !0);
+                            131072 & e.flags && (Vo = !0);
                         }
                     }
                     return Xo(e, t, n, r, l);
@@ -4510,7 +4510,7 @@
                         Ei(t),
                         (n = ca(e, t, n, r, void 0, l)),
                         (r = ma()),
-                        null === e || $o
+                        null === e || Vo
                             ? (Yr && r && Wr(t),
                               (t.flags |= 1),
                               Bo(e, t, n, l),
@@ -4525,7 +4525,7 @@
                         (n = da(t, r, n, l)),
                         fa(e),
                         (r = ma()),
-                        null === e || $o
+                        null === e || Vo
                             ? (Yr && r && Wr(t),
                               (t.flags |= 1),
                               Bo(e, t, n, a),
@@ -4803,7 +4803,7 @@
                                               dehydrated: s,
                                               treeContext:
                                                   null !== jr
-                                                      ? { id: Hr, overflow: Vr }
+                                                      ? { id: Hr, overflow: $r }
                                                       : null,
                                               retryLane: 536870912,
                                           }),
@@ -4896,9 +4896,9 @@
                                 ll({ value: l, source: null, stack: null }),
                                 (t = ii(e, t, n));
                         } else if (
-                            ($o || wi(e, t, n, !1),
+                            (Vo || wi(e, t, n, !1),
                             (r = !!(n & e.childLanes)),
-                            $o || r)
+                            Vo || r)
                         ) {
                             if (null !== (r = es)) {
                                 if (42 & (l = n & -n)) l = 1;
@@ -4952,10 +4952,10 @@
                                         ((u.retryLane = l),
                                         zr(e, l),
                                         Ls(r, 0, l),
-                                        Vo)
+                                        $o)
                                     );
                             }
-                            "$?" === s.data || $s(), (t = ii(e, t, n));
+                            "$?" === s.data || Vs(), (t = ii(e, t, n));
                         } else
                             "$?" === s.data
                                 ? ((t.flags |= 128),
@@ -4971,10 +4971,10 @@
                                   (Xr = !1),
                                   null !== e &&
                                       ((Ir[Ur++] = Hr),
-                                      (Ir[Ur++] = Vr),
+                                      (Ir[Ur++] = $r),
                                       (Ir[Ur++] = jr),
                                       (Hr = e.id),
-                                      (Vr = e.overflow),
+                                      ($r = e.overflow),
                                       (jr = t)),
                                   ((t = ai(t, l.children)).flags |= 4096));
                         return t;
@@ -5171,11 +5171,11 @@
                 }
                 function pi(e, t, n) {
                     if (null !== e)
-                        if (e.memoizedProps !== t.pendingProps) $o = !0;
+                        if (e.memoizedProps !== t.pendingProps) Vo = !0;
                         else {
                             if (!(di(e, n) || 128 & t.flags))
                                 return (
-                                    ($o = !1),
+                                    (Vo = !1),
                                     (function (e, t, n) {
                                         switch (t.tag) {
                                             case 3:
@@ -5258,10 +5258,10 @@
                                         return fi(e, t, n);
                                     })(e, t, n)
                                 );
-                            $o = !!(131072 & e.flags);
+                            Vo = !!(131072 & e.flags);
                         }
                     else
-                        ($o = !1),
+                        (Vo = !1),
                             Yr && 1048576 & t.flags && Br(t, Mr, t.index);
                     switch (((t.lanes = 0), t.tag)) {
                         case 16:
@@ -5957,7 +5957,7 @@
                             var d = -536870913 & i.lane,
                                 p = d !== i.lane;
                             if (p ? (ns & d) === d : (r & d) === d) {
-                                0 !== d && d === $l && (Ai = !0),
+                                0 !== d && d === Vl && (Ai = !0),
                                     null !== c &&
                                         (c = c.next =
                                             {
@@ -6107,7 +6107,7 @@
                         }
                     }
                 }
-                function Vi(e, t, n) {
+                function $i(e, t, n) {
                     (n.props = Oo(e.type, e.memoizedProps)),
                         (n.state = e.memoizedState);
                     try {
@@ -6116,7 +6116,7 @@
                         nc(e, t, n);
                     }
                 }
-                function $i(e, t) {
+                function Vi(e, t) {
                     try {
                         var n = e.ref;
                         if (null !== n) {
@@ -6214,7 +6214,7 @@
                                                     s = d;
                                                 default:
                                                     r.hasOwnProperty(m) ||
-                                                        $c(e, t, m, null, r, d);
+                                                        Vc(e, t, m, null, r, d);
                                             }
                                     }
                                     for (var p in r) {
@@ -6250,7 +6250,7 @@
                                                     break;
                                                 default:
                                                     m !== d &&
-                                                        $c(e, t, p, m, r, d);
+                                                        Vc(e, t, p, m, r, d);
                                             }
                                     }
                                     return void ht(e, i, u, s, c, f, a, l);
@@ -6267,7 +6267,7 @@
                                                     m = s;
                                                 default:
                                                     r.hasOwnProperty(a) ||
-                                                        $c(e, t, a, null, r, s);
+                                                        Vc(e, t, a, null, r, s);
                                             }
                                     for (l in r)
                                         if (
@@ -6287,7 +6287,7 @@
                                                     i = a;
                                                 default:
                                                     a !== s &&
-                                                        $c(e, t, l, a, r, s);
+                                                        Vc(e, t, l, a, r, s);
                                             }
                                     return (
                                         (t = u),
@@ -6318,7 +6318,7 @@
                                                 case "children":
                                                     break;
                                                 default:
-                                                    $c(e, t, u, null, r, l);
+                                                    Vc(e, t, u, null, r, l);
                                             }
                                     for (i in r)
                                         if (
@@ -6342,7 +6342,7 @@
                                                     break;
                                                 default:
                                                     l !== a &&
-                                                        $c(e, t, i, l, r, a);
+                                                        Vc(e, t, i, l, r, a);
                                             }
                                     return void bt(e, p, m);
                                 case "option":
@@ -6353,7 +6353,7 @@
                                                 !r.hasOwnProperty(h) &&
                                                 ("selected" === h
                                                     ? (e.selected = !1)
-                                                    : $c(e, t, h, null, r, p));
+                                                    : Vc(e, t, h, null, r, p));
                                     for (s in r)
                                         (p = r[s]),
                                             (m = n[s]),
@@ -6366,7 +6366,7 @@
                                                           "function" !=
                                                               typeof p &&
                                                           "symbol" != typeof p)
-                                                    : $c(e, t, s, p, r, m));
+                                                    : Vc(e, t, s, p, r, m));
                                     return;
                                 case "img":
                                 case "link":
@@ -6388,7 +6388,7 @@
                                             n.hasOwnProperty(g) &&
                                                 null != p &&
                                                 !r.hasOwnProperty(g) &&
-                                                $c(e, t, g, null, r, p);
+                                                Vc(e, t, g, null, r, p);
                                     for (c in r)
                                         if (
                                             ((p = r[c]),
@@ -6404,7 +6404,7 @@
                                                         throw Error(o(137, t));
                                                     break;
                                                 default:
-                                                    $c(e, t, c, p, r, m);
+                                                    Vc(e, t, c, p, r, m);
                                             }
                                     return;
                                 default:
@@ -6431,14 +6431,14 @@
                                     n.hasOwnProperty(v) &&
                                         null != p &&
                                         !r.hasOwnProperty(v) &&
-                                        $c(e, t, v, null, r, p);
+                                        Vc(e, t, v, null, r, p);
                             for (d in r)
                                 (p = r[d]),
                                     (m = n[d]),
                                     !r.hasOwnProperty(d) ||
                                         p === m ||
                                         (null == p && null == m) ||
-                                        $c(e, t, d, p, r, m);
+                                        Vc(e, t, d, p, r, m);
                         })(r, e.type, n, t),
                             (r[Ie] = t);
                     } catch (t) {
@@ -6488,7 +6488,7 @@
                                       : (t = n).appendChild(e),
                                   null != (n = n._reactRootContainer) ||
                                       null !== t.onclick ||
-                                      (t.onclick = Vc));
+                                      (t.onclick = $c));
                     else if (4 !== r && 27 !== r && null !== (e = e.child))
                         for (Yi(e, t, n), e = e.sibling; null !== e; )
                             Yi(e, t, n), (e = e.sibling);
@@ -6537,7 +6537,7 @@
                                         nc(n, n.return, e);
                                     }
                                 }
-                            64 & r && Hi(n), 512 & r && $i(n, n.return);
+                            64 & r && Hi(n), 512 & r && Vi(n, n.return);
                             break;
                         case 3:
                             if (
@@ -6559,13 +6559,13 @@
                             }
                             break;
                         case 26:
-                            gu(e, n), 512 & r && $i(n, n.return);
+                            gu(e, n), 512 & r && Vi(n, n.return);
                             break;
                         case 27:
                         case 5:
                             gu(e, n),
                                 null === t && 4 & r && Wi(n),
-                                512 & r && $i(n, n.return);
+                                512 & r && Vi(n, n.return);
                             break;
                         case 12:
                         default:
@@ -6590,7 +6590,7 @@
                             }
                             512 & r &&
                                 ("manual" === n.memoizedProps.mode
-                                    ? $i(n, n.return)
+                                    ? Vi(n, n.return)
                                     : Bi(n, n.return));
                     }
                 }
@@ -6705,7 +6705,7 @@
                                 (Bi(n, t),
                                 "function" ==
                                     typeof (r = n.stateNode)
-                                        .componentWillUnmount && Vi(n, t, r)),
+                                        .componentWillUnmount && $i(n, t, r)),
                                 iu(e, t, n);
                             break;
                         case 21:
@@ -7329,7 +7329,7 @@
                                 Bi(t, t.return);
                                 var n = t.stateNode;
                                 "function" == typeof n.componentWillUnmount &&
-                                    Vi(t, t.return, n),
+                                    $i(t, t.return, n),
                                     yu(t);
                                 break;
                             case 26:
@@ -7391,14 +7391,14 @@
                                         nc(r, r.return, e);
                                     }
                                 }
-                                n && 64 & o && Hi(a), $i(a, a.return);
+                                n && 64 & o && Hi(a), Vi(a, a.return);
                                 break;
                             case 26:
                             case 27:
                             case 5:
                                 vu(l, a, n),
                                     n && null === r && 4 & o && Wi(a),
-                                    $i(a, a.return);
+                                    Vi(a, a.return);
                                 break;
                             case 12:
                             default:
@@ -7409,7 +7409,7 @@
                                 break;
                             case 22:
                                 null === a.memoizedState && vu(l, a, n),
-                                    $i(a, a.return);
+                                    Vi(a, a.return);
                         }
                         t = t.sibling;
                     }
@@ -8023,7 +8023,7 @@
                 function Hu(e, t, n) {
                     return ((e = Au(6, e, null, t)).lanes = n), e;
                 }
-                function Vu(e, t, n) {
+                function $u(e, t, n) {
                     return (
                         ((t = Au(
                             4,
@@ -8039,7 +8039,7 @@
                         t
                     );
                 }
-                function $u(e) {
+                function Vu(e) {
                     e.flags |= 4;
                 }
                 function Bu(e, t) {
@@ -8139,7 +8139,7 @@
                                     (n.pendingContext = null)),
                                 (null !== e && null !== e.child) ||
                                     (nl(t)
-                                        ? $u(t)
+                                        ? Vu(t)
                                         : null === e ||
                                           (e.memoizedState.isDehydrated &&
                                               !(256 & t.flags)) ||
@@ -8153,15 +8153,15 @@
                             return (
                                 (n = t.memoizedState),
                                 null === e
-                                    ? ($u(t),
+                                    ? (Vu(t),
                                       null !== n
                                           ? (qu(t), Bu(t, n))
                                           : (qu(t), (t.flags &= -16777217)))
                                     : n
                                       ? n !== e.memoizedState
-                                          ? ($u(t), qu(t), Bu(t, n))
+                                          ? (Vu(t), qu(t), Bu(t, n))
                                           : (qu(t), (t.flags &= -16777217))
-                                      : (e.memoizedProps !== r && $u(t),
+                                      : (e.memoizedProps !== r && Vu(t),
                                         qu(t),
                                         (t.flags &= -16777217)),
                                 null
@@ -8170,7 +8170,7 @@
                             te(t), (n = G.current);
                             var l = t.type;
                             if (null !== e && null != t.stateNode)
-                                e.memoizedProps !== r && $u(t);
+                                e.memoizedProps !== r && Vu(t);
                             else {
                                 if (!r) {
                                     if (null === t.stateNode)
@@ -8182,7 +8182,7 @@
                                         ? el(t)
                                         : ((e = sf(l, r, n)),
                                           (t.stateNode = e),
-                                          $u(t));
+                                          Vu(t));
                             }
                             return qu(t), null;
                         case 5:
@@ -8191,7 +8191,7 @@
                                 (n = t.type),
                                 null !== e && null != t.stateNode)
                             )
-                                e.memoizedProps !== r && $u(t);
+                                e.memoizedProps !== r && Vu(t);
                             else {
                                 if (!r) {
                                     if (null === t.stateNode)
@@ -8302,13 +8302,13 @@
                                         default:
                                             e = !1;
                                     }
-                                    e && $u(t);
+                                    e && Vu(t);
                                 }
                             }
                             return qu(t), (t.flags &= -16777217), null;
                         case 6:
                             if (e && null != t.stateNode)
-                                e.memoizedProps !== r && $u(t);
+                                e.memoizedProps !== r && Vu(t);
                             else {
                                 if (
                                     "string" != typeof r &&
@@ -8665,8 +8665,8 @@
                     return 2 & Ju && 0 !== ns
                         ? ns & -ns
                         : null !== N.T
-                          ? 0 !== $l
-                              ? $l
+                          ? 0 !== Vl
+                              ? Vl
                               : kc()
                           : De();
                 }
@@ -8697,7 +8697,7 @@
                                       var n = Ju;
                                       Ju |= 2;
                                       var r = Hs(),
-                                          l = Vs();
+                                          l = $s();
                                       es !== e || ns !== t
                                           ? ((ks = null),
                                             (bs = ie() + 500),
@@ -9095,7 +9095,7 @@
                             : t === ol
                               ? ((t = dl()), (rs = 4))
                               : (rs =
-                                    t === Vo
+                                    t === $o
                                         ? 8
                                         : null !== t &&
                                             "object" == typeof t &&
@@ -9109,11 +9109,11 @@
                     var e = N.H;
                     return (N.H = Co), null === e ? Co : e;
                 }
-                function Vs() {
+                function $s() {
                     var e = N.A;
                     return (N.A = Xu), e;
                 }
-                function $s() {
+                function Vs() {
                     (ss = 4),
                         as ||
                             ((4194176 & ns) !== ns && null !== Pl.current) ||
@@ -9126,7 +9126,7 @@
                     var r = Ju;
                     Ju |= 2;
                     var l = Hs(),
-                        a = Vs();
+                        a = $s();
                     (es === e && ns === t) || ((ks = null), Us(e, t)), (t = !1);
                     var o = ss;
                     e: for (;;)
@@ -9233,7 +9233,7 @@
                                             case 13:
                                                 return (
                                                     null === zl
-                                                        ? $s()
+                                                        ? Vs()
                                                         : null ===
                                                               n.alternate &&
                                                           0 === ss &&
@@ -9286,7 +9286,7 @@
                                         }
                                         throw Error(o(435, n.tag));
                                     }
-                                    return rc(e, r, l), $s(), !1;
+                                    return rc(e, r, l), Vs(), !1;
                                 }
                                 if (Yr)
                                     return (
@@ -9513,7 +9513,7 @@
                                           (function (e, t) {
                                               if (
                                                   ((e = e.containerInfo),
-                                                  (Qc = Vf),
+                                                  (Qc = $f),
                                                   Jn((e = Zn(e))))
                                               ) {
                                                   if ("selectionStart" in e)
@@ -9636,7 +9636,7 @@
                                                       focusedElem: e,
                                                       selectionRange: n,
                                                   },
-                                                      Vf = !1,
+                                                      $f = !1,
                                                       tu = t;
                                                   null !== tu;
 
@@ -9759,7 +9759,7 @@
                                           })(e, s),
                                           pu(s, e),
                                           er(qc, e.containerInfo),
-                                          (Vf = !!Qc),
+                                          ($f = !!Qc),
                                           (qc = Qc = null),
                                           (e.current = s),
                                           ru(e, s.alternate, s),
@@ -10267,7 +10267,7 @@
                 function Oc(e, t, n, r) {
                     switch (Yf(t)) {
                         case 2:
-                            var l = $f;
+                            var l = Vf;
                             break;
                         case 8:
                             l = Bf;
@@ -10346,7 +10346,7 @@
                                     s = e;
                                 switch (e) {
                                     case "keypress":
-                                        if (0 === $t(n)) break e;
+                                        if (0 === Vt(n)) break e;
                                     case "keydown":
                                     case "keyup":
                                         u = pn;
@@ -10561,7 +10561,7 @@
                                 if (Mn) g = Qn;
                                 else {
                                     g = Bn;
-                                    var y = $n;
+                                    var y = Vn;
                                 }
                             else
                                 !(u = i.nodeName) ||
@@ -10630,7 +10630,7 @@
                                     (zn || "onCompositionStart" !== b
                                         ? "onCompositionEnd" === b &&
                                           zn &&
-                                          (v = Vt())
+                                          (v = $t())
                                         : ((jt =
                                               "value" in (Ut = l)
                                                   ? Ut.value
@@ -10663,7 +10663,7 @@
                                           if (zn)
                                               return "compositionend" === e ||
                                                   (!kn && _n(e, t))
-                                                  ? ((e = Vt()),
+                                                  ? ((e = $t()),
                                                     (Ht = jt = Ut = null),
                                                     (zn = !1),
                                                     e)
@@ -10846,8 +10846,8 @@
                 function Hc(e, t) {
                     return (t = jc(t)), jc(e) === t;
                 }
-                function Vc() {}
-                function $c(e, t, n, r, l, a) {
+                function $c() {}
+                function Vc(e, t, n, r, l, a) {
                     switch (n) {
                         case "children":
                             "string" == typeof r
@@ -10910,8 +10910,8 @@
                                 ("function" == typeof a &&
                                     ("formAction" === n
                                         ? ("input" !== t &&
-                                              $c(e, t, "name", l.name, l, null),
-                                          $c(
+                                              Vc(e, t, "name", l.name, l, null),
+                                          Vc(
                                               e,
                                               t,
                                               "formEncType",
@@ -10919,7 +10919,7 @@
                                               l,
                                               null,
                                           ),
-                                          $c(
+                                          Vc(
                                               e,
                                               t,
                                               "formMethod",
@@ -10927,7 +10927,7 @@
                                               l,
                                               null,
                                           ),
-                                          $c(
+                                          Vc(
                                               e,
                                               t,
                                               "formTarget",
@@ -10935,7 +10935,7 @@
                                               l,
                                               null,
                                           ))
-                                        : ($c(
+                                        : (Vc(
                                               e,
                                               t,
                                               "encType",
@@ -10943,8 +10943,8 @@
                                               l,
                                               null,
                                           ),
-                                          $c(e, t, "method", l.method, l, null),
-                                          $c(
+                                          Vc(e, t, "method", l.method, l, null),
+                                          Vc(
                                               e,
                                               t,
                                               "target",
@@ -10962,7 +10962,7 @@
                             (r = zt("" + r)), e.setAttribute(n, r);
                             break;
                         case "onClick":
-                            null != r && (e.onclick = Vc);
+                            null != r && (e.onclick = $c);
                             break;
                         case "onScroll":
                             null != r && zc("scroll", e);
@@ -11209,7 +11209,7 @@
                             null != r && zc("scrollend", e);
                             break;
                         case "onClick":
-                            null != r && (e.onclick = Vc);
+                            null != r && (e.onclick = $c);
                             break;
                         case "suppressContentEditableWarning":
                         case "suppressHydrationWarning":
@@ -11276,12 +11276,12 @@
                                             case "dangerouslySetInnerHTML":
                                                 throw Error(o(137, t));
                                             default:
-                                                $c(e, t, r, i, n, null);
+                                                Vc(e, t, r, i, n, null);
                                         }
                                 }
                             return (
-                                a && $c(e, t, "srcSet", n.srcSet, n, null),
-                                void (l && $c(e, t, "src", n.src, n, null))
+                                a && Vc(e, t, "srcSet", n.srcSet, n, null),
+                                void (l && Vc(e, t, "src", n.src, n, null))
                             );
                         case "input":
                             zc("invalid", e);
@@ -11317,7 +11317,7 @@
                                                     throw Error(o(137, t));
                                                 break;
                                             default:
-                                                $c(e, t, l, f, n, null);
+                                                Vc(e, t, l, f, n, null);
                                         }
                                 }
                             return gt(e, r, u, s, c, i, a, !1), void ct(e);
@@ -11334,7 +11334,7 @@
                                         case "multiple":
                                             l = u;
                                         default:
-                                            $c(e, t, a, u, n, null);
+                                            Vc(e, t, a, u, n, null);
                                     }
                             return (
                                 (t = r),
@@ -11361,7 +11361,7 @@
                                             if (null != u) throw Error(o(91));
                                             break;
                                         default:
-                                            $c(e, t, i, u, n, null);
+                                            Vc(e, t, i, u, n, null);
                                     }
                             return kt(e, l, a, r), void ct(e);
                         case "option":
@@ -11373,7 +11373,7 @@
                                               l &&
                                               "function" != typeof l &&
                                               "symbol" != typeof l)
-                                        : $c(e, t, s, l, n, null));
+                                        : Vc(e, t, s, l, n, null));
                             return;
                         case "dialog":
                             zc("cancel", e), zc("close", e);
@@ -11414,7 +11414,7 @@
                                         case "dangerouslySetInnerHTML":
                                             throw Error(o(137, t));
                                         default:
-                                            $c(e, t, c, l, n, null);
+                                            Vc(e, t, c, l, n, null);
                                     }
                             return;
                         default:
@@ -11429,7 +11429,7 @@
                     for (u in n)
                         n.hasOwnProperty(u) &&
                             null != (l = n[u]) &&
-                            $c(e, t, u, l, n, null);
+                            Vc(e, t, u, l, n, null);
                 }
                 var Qc = null,
                     qc = null;
@@ -12186,8 +12186,8 @@
                     $$typeof: h,
                     Provider: null,
                     Consumer: null,
-                    _currentValue: V,
-                    _currentValue2: V,
+                    _currentValue: $,
+                    _currentValue2: $,
                     _threadCount: 0,
                 };
                 function Mf(e, t, n, r, l, a, o, i) {
@@ -12259,8 +12259,8 @@
                         null !== t && Ls(t, 0, 67108864), jf(e, 67108864);
                     }
                 }
-                var Vf = !0;
-                function $f(e, t, n, r) {
+                var $f = !0;
+                function Vf(e, t, n, r) {
                     var l = N.T;
                     N.T = null;
                     var a = H.p;
@@ -12281,7 +12281,7 @@
                     }
                 }
                 function Wf(e, t, n, r) {
-                    if (Vf) {
+                    if ($f) {
                         var l = Qf(r);
                         if (null === l) Rc(e, t, r, qf, n), ld(e, r);
                         else if (
@@ -13964,73 +13964,171 @@
     }
     var r = n(540),
         l = n(338);
-    const a = () => {
-            const [e, t] = (0, r.useState)([]),
-                [n, l] = (0, r.useState)("");
-            (0, r.useEffect)(() => {
-                a();
-            }, []);
-            const a = async () => {
-                const e = await fetch("/app/api/messages/"),
-                    n = await e.json();
-                t(n);
-            };
-            return r.createElement(
+    const a = ({
+            threads: e,
+            activeThread: t,
+            onThreadSelect: n,
+            onNewThread: l,
+        }) =>
+            r.createElement(
                 "div",
-                { className: "chat-container" },
+                { className: "thread-list" },
                 r.createElement(
-                    "div",
-                    { className: "messages" },
-                    e.map((e) =>
+                    "button",
+                    { onClick: l, className: "new-thread-btn" },
+                    "New Chat",
+                ),
+                e.map((e) =>
+                    r.createElement(
+                        "div",
+                        {
+                            key: e.id,
+                            className:
+                                "thread-item " +
+                                (t?.id === e.id ? "active" : ""),
+                            onClick: () => n(e),
+                        },
+                        r.createElement("h3", null, e.title),
+                        r.createElement("p", null, e.last_message?.content),
                         r.createElement(
-                            "div",
-                            {
-                                key: e.id,
-                                className:
-                                    "message " + (e.is_bot ? "bot" : "user"),
-                            },
-                            r.createElement("p", null, e.content),
-                            r.createElement(
-                                "small",
-                                null,
-                                new Date(e.timestamp).toLocaleString(),
-                            ),
+                            "small",
+                            null,
+                            new Date(e.last_message_at).toLocaleString(),
                         ),
                     ),
                 ),
-                r.createElement(
-                    "form",
-                    {
-                        onSubmit: async (r) => {
-                            if ((r.preventDefault(), !n.trim())) return;
-                            const a = await fetch("/app/api/messages/", {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                    },
-                                    body: JSON.stringify({ content: n }),
+            ),
+        o = () => {
+            const [e, t] = (0, r.useState)([]),
+                [n, l] = (0, r.useState)(null),
+                [o, i] = (0, r.useState)([]),
+                [u, s] = (0, r.useState)("");
+            (0, r.useEffect)(() => {
+                c();
+            }, []),
+                (0, r.useEffect)(() => {
+                    n && f(n.id);
+                }, [n]);
+            const c = async () => {
+                    const e = await fetch("/app/api/threads/"),
+                        n = await e.json();
+                    t(n);
+                },
+                f = async (e) => {
+                    const t = await fetch(`/app/api/threads/${e}/messages/`),
+                        n = await t.json();
+                    i(n);
+                };
+            return r.createElement(
+                "div",
+                { className: "chat-container" },
+                r.createElement(a, {
+                    threads: e,
+                    activeThread: n,
+                    onThreadSelect: l,
+                    onNewThread: async () => {
+                        const n = await fetch("/app/api/threads/", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({
+                                    title:
+                                        "New Chat " +
+                                        new Date().toLocaleTimeString(),
                                 }),
-                                o = await a.json();
-                            t([...e, ...o]), l("");
-                        },
+                            }),
+                            r = await n.json();
+                        t([r, ...e]), l(r), i([]);
                     },
-                    r.createElement("input", {
-                        type: "text",
-                        value: n,
-                        onChange: (e) => l(e.target.value),
-                        placeholder: "Type a message...",
-                    }),
-                    r.createElement("button", { type: "submit" }, "Send"),
+                }),
+                r.createElement(
+                    "div",
+                    { className: "chat-main" },
+                    n
+                        ? r.createElement(
+                              r.Fragment,
+                              null,
+                              r.createElement(
+                                  "div",
+                                  { className: "messages" },
+                                  o.map((e) =>
+                                      r.createElement(
+                                          "div",
+                                          {
+                                              key: e.id,
+                                              className:
+                                                  "message " +
+                                                  (e.is_bot ? "bot" : "user"),
+                                          },
+                                          r.createElement("p", null, e.content),
+                                          r.createElement(
+                                              "small",
+                                              null,
+                                              new Date(
+                                                  e.timestamp,
+                                              ).toLocaleString(),
+                                          ),
+                                      ),
+                                  ),
+                              ),
+                              r.createElement(
+                                  "form",
+                                  {
+                                      onSubmit: async (e) => {
+                                          if (
+                                              (e.preventDefault(),
+                                              !u.trim() || !n)
+                                          )
+                                              return;
+                                          const t = await fetch(
+                                                  "/app/api/messages/",
+                                                  {
+                                                      method: "POST",
+                                                      headers: {
+                                                          "Content-Type":
+                                                              "application/json",
+                                                      },
+                                                      body: JSON.stringify({
+                                                          content: u,
+                                                          thread: n.id,
+                                                      }),
+                                                  },
+                                              ),
+                                              r = await t.json();
+                                          i([...o, ...r]), s(""), c();
+                                      },
+                                  },
+                                  r.createElement("input", {
+                                      type: "text",
+                                      value: u,
+                                      onChange: (e) => s(e.target.value),
+                                      placeholder: "Type a message...",
+                                  }),
+                                  r.createElement(
+                                      "button",
+                                      { type: "submit" },
+                                      "Send",
+                                  ),
+                              ),
+                          )
+                        : r.createElement(
+                              "div",
+                              { className: "no-thread-selected" },
+                              r.createElement(
+                                  "p",
+                                  null,
+                                  "Select a chat or create a new one to start messaging",
+                              ),
+                          ),
                 ),
             );
         },
-        o = () =>
+        i = () =>
             r.createElement(
                 "div",
                 { className: "app" },
                 r.createElement("h1", null, "Chat Application"),
-                r.createElement(a, null),
+                r.createElement(o, null),
             ),
-        i = document.getElementById("root");
-    (0, l.createRoot)(i).render(r.createElement(o, null));
+        u = document.getElementById("root");
+    (0, l.createRoot)(u).render(r.createElement(i, null));
 })();

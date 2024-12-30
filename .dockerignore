@@ -1,0 +1,15 @@
+# Git files
+.git
+.gitignore
+
+# Environment files
+*.env
+
+# Virtual environments
+.venv
+
+# Database
+backend/llmchat/db.sqlite3
+*.sqlite*
+*.sqlite3
+db.sqlite3

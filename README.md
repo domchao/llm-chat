@@ -17,7 +17,6 @@ poetry install
 
 # Create Django project and app
 django-admin startproject llmchat
-cd llmchat
 python manage.py startapp app
 
 # Make migrations and create database
@@ -71,9 +70,9 @@ Integration:
 ## Directory Structure
 
 ```bash
-chatapp/
-├── backend/
-│   ├── chat/
+llm-chat/     # Overall project dir (front and backend)
+├── backend/  # Folder for backend - a Django 'project'
+│   ├── llmchat/  # `django-admin startproject llmchat`
 │   │   ├── __init__.py
 │   │   ├── admin.py
 │   │   ├── apps.py
@@ -83,7 +82,7 @@ chatapp/
 │   │   ├── serializers.py
 │   │   ├── urls.py
 │   │   └── views.py
-│   ├── chatapp/
+│   ├── app/   # `python manage.py startapp app`
 │   │   ├── __init__.py
 │   │   ├── asgi.py
 │   │   ├── settings.py

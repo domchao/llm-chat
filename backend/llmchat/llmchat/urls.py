@@ -26,4 +26,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", react_app, name="react_app"),
     path("app/", include("app.urls")),
+    path("t/<uuid:thread_id>/", react_app, name="thread_view"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

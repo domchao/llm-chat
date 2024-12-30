@@ -1,21 +1,39 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ThreadList from "./ThreadList";
 
-const Chat = () => {
+const Chat = ({ initialThreadId }) => {
     const [threads, setThreads] = useState([]);
     const [activeThread, setActiveThread] = useState(null);
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchThreads();
     }, []);
 
     useEffect(() => {
-        if (activeThread) {
-            fetchMessages(activeThread.id);
+        if (initialThreadId) {
+            fetchThreadById(initialThreadId);
         }
-    }, [activeThread]);
+    }, [initialThreadId]);
+
+    const fetchThreadById = async (threadId) => {
+        try {
+            const response = await fetch(`/app/api/threads/${threadId}/`);
+            if (response.ok) {
+                const thread = await response.json();
+                setActiveThread(thread);
+                fetchMessages(threadId);
+            } else {
+                navigate("/"); // Redirect to home if thread not found
+            }
+        } catch (error) {
+            console.error("Error fetching thread:", error);
+            navigate("/");
+        }
+    };
 
     const fetchThreads = async () => {
         const response = await fetch("/app/api/threads/");
@@ -43,6 +61,13 @@ const Chat = () => {
         setThreads([newThread, ...threads]);
         setActiveThread(newThread);
         setMessages([]);
+        navigate(`/t/${newThread.id}`);
+    };
+
+    const handleThreadSelect = (thread) => {
+        setActiveThread(thread);
+        navigate(`/t/${thread.id}`);
+        fetchMessages(thread.id);
     };
 
     const sendMessage = async (e) => {
@@ -63,8 +88,6 @@ const Chat = () => {
         const data = await response.json();
         setMessages([...messages, ...data]);
         setInput("");
-
-        // Refresh threads to update last message
         fetchThreads();
     };
 
@@ -73,7 +96,7 @@ const Chat = () => {
             <ThreadList
                 threads={threads}
                 activeThread={activeThread}
-                onThreadSelect={setActiveThread}
+                onThreadSelect={handleThreadSelect}
                 onNewThread={createNewThread}
             />
             <div className="chat-main">

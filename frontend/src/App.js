@@ -1,12 +1,26 @@
 import React from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useParams,
+    useNavigate,
+} from "react-router-dom";
 import Chat from "./components/Chat";
+
+const ChatWrapper = () => {
+    const { threadId } = useParams();
+    return <Chat initialThreadId={threadId} />;
+};
 
 const App = () => {
     return (
-        <div className="app">
-            <h1>Chat Application</h1>
-            <Chat />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/t/:threadId" element={<ChatWrapper />} />
+                <Route path="/" element={<Chat />} />
+            </Routes>
+        </Router>
     );
 };
 

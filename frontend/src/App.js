@@ -7,6 +7,7 @@ import {
     useNavigate,
 } from "react-router-dom";
 import Chat from "./components/Chat";
+import "./styles/app.css";
 
 const ChatWrapper = () => {
     const { threadId } = useParams();

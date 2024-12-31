@@ -2,6 +2,8 @@
     --primary-color: #adf0d4;
     --secondary-color: #1fd8a4;
     --bg-color: #0d1512;
+    --bg-lighter: #1b2c26;
+    --bg-darker: #020303;
 }
 
 body {
@@ -12,4 +14,9 @@ body {
     flex-direction: column;
     gap: 36px;
     padding: 14px;
+}
+
+.initial-input {
+    background: var(--bg-darker);
+    color: var(--primary-color);
 }

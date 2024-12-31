@@ -4,9 +4,9 @@ import {
     Routes,
     Route,
     useParams,
-    useNavigate,
 } from "react-router-dom";
 import Chat from "./components/Chat";
+import LandingPage from "./components/LandingPage";
 import "./styles/app.css";
 import "./styles/globals.css";
 
@@ -20,7 +20,7 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/t/:threadId" element={<ChatWrapper />} />
-                <Route path="/" element={<Chat />} />
+                <Route path="/" element={<LandingPage />} />
             </Routes>
         </Router>
     );

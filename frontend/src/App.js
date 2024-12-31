@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Chat from "./components/Chat";
 import "./styles/app.css";
+import "./styles/globals.css";
 
 const ChatWrapper = () => {
     const { threadId } = useParams();

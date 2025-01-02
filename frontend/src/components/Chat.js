@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ThreadList from "./ThreadList";
+import GrowingTextArea from "./GrowingTextArea";
 
 const Chat = ({ initialThreadId }) => {
-    const [threads, setThreads] = useState([]);
     const [activeThread, setActiveThread] = useState(null);
     const [messages, setMessages] = useState([]);
-    const [input, setInput] = useState("");
     const navigate = useNavigate();
-
-    useEffect(() => {
-        fetchThreads();
-    }, []);
 
     useEffect(() => {
         if (initialThreadId) {
@@ -35,44 +29,16 @@ const Chat = ({ initialThreadId }) => {
         }
     };
 
-    const fetchThreads = async () => {
-        const response = await fetch("/app/api/threads/");
-        const data = await response.json();
-        setThreads(data);
-    };
-
     const fetchMessages = async (threadId) => {
         const response = await fetch(`/app/api/threads/${threadId}/messages/`);
         const data = await response.json();
         setMessages(data);
     };
 
-    const createNewThread = async () => {
-        const response = await fetch("/app/api/threads/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                title: "New Chat " + new Date().toLocaleTimeString(),
-            }),
-        });
-        const newThread = await response.json();
-        setThreads([newThread, ...threads]);
-        setActiveThread(newThread);
-        setMessages([]);
-        navigate(`/t/${newThread.id}`);
-    };
+    const sendMessage = async (text) => {
+        if (!text.trim() || !activeThread) return;
 
-    const handleThreadSelect = (thread) => {
-        setActiveThread(thread);
-        navigate(`/t/${thread.id}`);
-        fetchMessages(thread.id);
-    };
-
-    const sendMessage = async (e) => {
-        e.preventDefault();
-        if (!input.trim() || !activeThread) return;
+        console.log(activeThread.id);
 
         const response = await fetch("/app/api/messages/", {
             method: "POST",
@@ -80,28 +46,20 @@ const Chat = ({ initialThreadId }) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                content: input,
+                content: text.trim(),
                 thread: activeThread.id,
             }),
         });
 
         const data = await response.json();
         setMessages([...messages, ...data]);
-        setInput("");
-        fetchThreads();
     };
 
     return (
-        <div className="chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4">
-            <ThreadList
-                threads={threads}
-                activeThread={activeThread}
-                onThreadSelect={handleThreadSelect}
-                onNewThread={createNewThread}
-            />
-            <div className="chat-main">
-                {activeThread ? (
-                    <>
+        <div className="chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4 min-h-screen">
+            <div className="chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8">
+                <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
+                    <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
                         <div className="messages">
                             {messages.map((message) => (
                                 <div
@@ -119,23 +77,12 @@ const Chat = ({ initialThreadId }) => {
                                 </div>
                             ))}
                         </div>
-                        <form onSubmit={sendMessage}>
-                            <input
-                                type="text"
-                                value={input}
-                                onChange={(e) => setInput(e.target.value)}
-                                placeholder="Type a message..."
-                            />
-                            <button type="submit">Send</button>
-                        </form>
-                    </>
-                ) : (
-                    <div className="no-thread-selected">
-                        <p>
-                            Select a chat or create a new one to start messaging
-                        </p>
                     </div>
-                )}
+                    <hr></hr>
+                </div>
+            </div>
+            <div className="message-input sticky bottom-0 mx-auto w-full pt-6">
+                <GrowingTextArea onSubmit={sendMessage} />
             </div>
         </div>
     );

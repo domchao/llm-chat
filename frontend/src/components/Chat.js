@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GrowingTextArea from "./GrowingTextArea";
+import UserMessage from "./UserMessage";
+import BotMessage from "./BotMessage";
 
 const Chat = ({ initialThreadId }) => {
     const [activeThread, setActiveThread] = useState(null);
@@ -60,25 +62,14 @@ const Chat = ({ initialThreadId }) => {
             <div className="chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8">
                 <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
                     <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
-                        <div className="messages">
-                            {messages.map((message) => (
-                                <div
-                                    key={message.id}
-                                    className={`message ${
-                                        message.is_bot ? "bot" : "user"
-                                    }`}
-                                >
-                                    <p>{message.content}</p>
-                                    <small>
-                                        {new Date(
-                                            message.timestamp,
-                                        ).toLocaleString()}
-                                    </small>
-                                </div>
-                            ))}
-                        </div>
+                        {messages.map((message) =>
+                            message.is_bot ? (
+                                <BotMessage message={message.content} />
+                            ) : (
+                                <UserMessage message={message.content} />
+                            ),
+                        )}
                     </div>
-                    <hr></hr>
                 </div>
             </div>
             <div className="message-input sticky bottom-0 mx-auto w-full pt-6">

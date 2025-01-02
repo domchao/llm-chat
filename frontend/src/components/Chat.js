@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import GrowingTextArea from "./GrowingTextArea";
 import UserMessage from "./UserMessage";
 import BotMessage from "./BotMessage";
+import Sidebar from "./HiddenSidebar";
 
 const Chat = ({ initialThreadId }) => {
     const [activeThread, setActiveThread] = useState(null);
@@ -58,22 +59,28 @@ const Chat = ({ initialThreadId }) => {
     };
 
     return (
-        <div className="chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4 min-h-screen">
-            <div className="chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8">
-                <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
-                    <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
-                        {messages.map((message) =>
-                            message.is_bot ? (
-                                <BotMessage message={message.content} />
-                            ) : (
-                                <UserMessage message={message.content} />
-                            ),
-                        )}
+        <div className="relative w-full">
+            {/* Sidebar is positioned fixed and will overlay content */}
+            <Sidebar />
+
+            {/* Main content takes full width */}
+            <div className="chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4 min-h-screen">
+                <div className="chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8">
+                    <div className="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2">
+                        <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
+                            {messages.map((message) =>
+                                message.is_bot ? (
+                                    <BotMessage message={message.content} />
+                                ) : (
+                                    <UserMessage message={message.content} />
+                                ),
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="message-input sticky bottom-0 mx-auto w-full pt-6">
-                <GrowingTextArea onSubmit={sendMessage} />
+                <div className="message-input sticky bottom-0 mx-auto w-full pt-6">
+                    <GrowingTextArea onSubmit={sendMessage} />
+                </div>
             </div>
         </div>
     );

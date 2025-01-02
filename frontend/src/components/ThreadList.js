@@ -1,21 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const ThreadList = ({ threads, activeThread, onThreadSelect, onNewThread }) => {
+const ThreadList = () => {
+    const [threads, setThreads] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        fetchThreads();
+    }, []);
+
+    const fetchThreads = async () => {
+        const response = await fetch("/app/api/threads/");
+        const data = await response.json();
+        setThreads(data);
+    };
+
+    const handleThreadSelect = (thread) => {
+        navigate(`/t/${thread.id}`);
+    };
+
     return (
         <div className="thread-list">
-            <button onClick={onNewThread} className="new-thread-btn">
-                New Chat
-            </button>
             {threads.map((thread) => (
                 <div
-                    key={thread.id}
-                    className={`thread-item ${
-                        activeThread?.id === thread.id ? "active" : ""
-                    }`}
-                    onClick={() => onThreadSelect(thread)}
+                    className="space-y-2 mt-4"
+                    onClick={() => handleThreadSelect(thread)}
                 >
-                    <h3>{thread.title}</h3>
-                    <p>{thread.last_message?.content}</p>
+                    <div className="flex items-center space-x-3">
+                        <span className="w-full">{thread.title}</span>
+                    </div>
+                    {/* <p>{thread.last_message?.content}</p> */}
                     <small>
                         {new Date(thread.last_message_at).toLocaleString()}
                     </small>

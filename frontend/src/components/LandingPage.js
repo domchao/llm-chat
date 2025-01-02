@@ -3,6 +3,23 @@ import { useNavigate } from "react-router-dom";
 import GrowingTextArea from "./GrowingTextArea";
 
 const LandingPage = () => {
+    const sendMessage = async (text, thread) => {
+        if (!text.trim()) return;
+
+        const response = await fetch("/app/api/messages/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                content: text,
+                thread: thread,
+            }),
+        });
+
+        const data = await response.json();
+    };
+
     const navigate = useNavigate();
 
     const handleSubmit = async (text) => {
@@ -17,6 +34,7 @@ const LandingPage = () => {
         });
 
         const thread = await response.json();
+        sendMessage(text, thread.id);
         navigate(`/t/${thread.id}`);
     };
 

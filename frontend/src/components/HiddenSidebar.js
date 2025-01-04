@@ -14,11 +14,11 @@ const Sidebar = () => {
 
     return (
         <nav
-            className={`fixed left-0 top-0 h-screen shadow-lg transition-colors duration-300 z-50 ${width}`}
+            className={`fixed left-0 top-0 h-screen shadow-lg transition-colors duration-300 backdrop-blur rounded-xl z-50 ${width}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <div className="h-full flex flex-col w-72 p-4">
+            <div className="h-full flex flex-col w-72 p-4 gap-6">
                 <div className="flex items-center h-12">
                     <span className="font-medium">Chats</span>
                 </div>

@@ -23,7 +23,7 @@ const ThreadList = () => {
         <div className="thread-list">
             {threads.map((thread) => (
                 <div
-                    className="space-y-2 mt-4"
+                    className="space-y-2 mt-4 hover:bg-black rounded-xl mx-auto px-3 py-2"
                     onClick={() => handleThreadSelect(thread)}
                 >
                     <div className="flex items-center space-x-3">

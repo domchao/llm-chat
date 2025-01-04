@@ -14,21 +14,6 @@ class Thread(models.Model):
         return f"Thread: {self.title}"
 
 
-# class Message(models.Model):
-#     thread = models.ForeignKey(
-#         Thread, related_name="messages", on_delete=models.CASCADE
-#     )
-#     content = models.TextField()
-#     timestamp = models.DateTimeField(auto_now_add=True)
-#     is_bot = models.BooleanField(default=False)
-
-#     class Meta:
-#         ordering = ["timestamp"]
-
-#     def __str__(self):
-#         return f"{'Bot' if self.is_bot else 'User'}: {self.content[:50]}"
-
-
 class Message(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     thread = models.ForeignKey(

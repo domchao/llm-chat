@@ -23,7 +23,17 @@ const Sidebar = () => {
                     <span className="font-medium">Chats</span>
                 </div>
                 <div
-                    className={`flex-1 transition-opacity duration-300 ${contentOpacity}`}
+                    className={`transition-opacity duration-300 h-12 ${contentOpacity}`}
+                >
+                    <a
+                        href="/"
+                        className="flex items-center rounded-xl hover:bg-black px-4 py-2"
+                    >
+                        Start a new chat
+                    </a>
+                </div>
+                <div
+                    className={`transition-opacity overflow-y-scroll duration-300 ${contentOpacity}`}
                 >
                     <ThreadList />
                 </div>

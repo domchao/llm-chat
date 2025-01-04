@@ -60,12 +60,15 @@ migrate: python-install
 # Create a new migration based on changes to models
 makemigrations: python-install
 	@echo "Creating new migration..."
-	$(ACTIVATE) && cd $(APP_DIR) && $(DJANGO_MANAGE) makemigrations
+	$(ACTIVATE) && cd $(APP_DIR) && $(DJANGO_MANAGE) makemigrations app
 
-# Delete the databaseß
+# Delete the database
 database-delete:
 	@echo "Deleting database..."
-	cd $(APP_DIR) && rm -rf db.sqlite3
+	cd $(APP_DIR) && rm -rf db.sqlite3 && rm -rf app/migrations
+
+database-reset: database-delete makemigrations migrate
+	@echo "Database reset complete."
 
 # Clean up compiled Python files
 clean:
@@ -90,5 +93,7 @@ help:
 	@echo "  make runserver         - Start the development server"
 	@echo "  make migrate           - Apply database migrations"
 	@echo "  make makemigrations    - Create new migrations"
+	@echo "  make database-delete   - Delete database"
+	@echo "  make database-reset    - Delete database and rebuild"
 	@echo "  make clean             - Remove compiled files and caches"
 	@echo "  make help              - Display this help message"

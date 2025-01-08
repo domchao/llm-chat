@@ -30,3 +30,8 @@ body {
     background: var(--bg-lighter);
     color: var(--secondary-color);
 }
+
+.artifact-button {
+    background: var(--bg-darker);
+    color: var(--primary-color);
+}

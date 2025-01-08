@@ -16308,7 +16308,8 @@
                             "artifact-button inline-flex items-center gap-2 px-4 py-2 rounded-md",
                     },
                     r.createElement(He, { size: 16 }),
-                    "Open ",
+                    "Open",
+                    " ",
                     "application/vnd.ant.code" === e.type ? "code" : "artifact",
                 ),
                 r.createElement(

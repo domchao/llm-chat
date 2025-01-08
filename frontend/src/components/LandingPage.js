@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import GrowingTextArea from "./GrowingTextArea";
-import Sidebar from "./HiddenSidebar";
+import Sidebar from "./sidebar/HiddenSidebar";
 
 const LandingPage = () => {
     const sendMessage = async (text, thread) => {

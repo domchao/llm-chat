@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GrowingTextArea from "./GrowingTextArea";
-import UserMessage from "./UserMessage";
-import BotMessage from "./BotMessage";
-import Sidebar from "./HiddenSidebar";
+import UserMessage from "./chat/UserMessage";
+import BotMessage from "./chat/BotMessage";
+// import Sidebar from "./HiddenSidebar";
+import Sidebar from "./sidebar/HiddenSidebar";
 
 const Chat = ({ initialThreadId }) => {
     const [activeThread, setActiveThread] = useState(null);

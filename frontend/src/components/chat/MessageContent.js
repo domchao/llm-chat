@@ -1,5 +1,5 @@
 import React from "react";
-import ArtifactViewer from "./ArtifactViewer";
+import ArtifactViewer from "../artifact/ArtifactViewer";
 
 const parseMessageContent = (content) => {
     if (!content) return [{ type: "text", content: "" }];

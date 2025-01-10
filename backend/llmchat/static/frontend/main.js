@@ -13,7 +13,7 @@
                     o = n.n(l)()(a());
                 o.push([
                     e.id,
-                    ":root {\n    --primary-color: #adf0d4;\n    --secondary-color: #1fd8a4;\n    --bg-color: #0d1512;\n    --bg-lighter: #1b2c26;\n    --bg-darker: #020303;\n}\n\nbody {\n    background: var(--bg-color);\n    color: var(--primary-color);\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    gap: 36px;\n    padding: 14px;\n}\n\n.initial-input {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-user {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-bot {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n}\n\n.artifact-button {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n",
+                    ":root {\n    --primary-color: #adf0d4;\n    --secondary-color: #1fd8a4;\n    --bg-color: #0d1512;\n    --bg-lighter: #1b2c26;\n    --bg-darker: #020303;\n}\n\nbody {\n    background: var(--bg-color);\n    color: var(--primary-color);\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    gap: 36px;\n    padding: 14px;\n}\n\n.initial-input {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-user {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-bot {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n}\n\n.artifact-button {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.sidepanel-container {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n    \n}\n\n.sidepannel-header {\n    border-color: var(--bg-color);\n}\n\n.sidepanel-button:hover {\n    background: var(--bg-color);\n}\n\n.sidepanel-code-renderer {\n    background: var(--bg-color);\n}",
                     "",
                 ]);
                 const i = o;
@@ -26,7 +26,7 @@
                     o = n.n(l)()(a());
                 o.push([
                     e.id,
-                    "*, ::before, ::after {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-gradient-from-position:  ;\n  --tw-gradient-via-position:  ;\n  --tw-gradient-to-position:  ;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n  --tw-contain-size:  ;\n  --tw-contain-layout:  ;\n  --tw-contain-paint:  ;\n  --tw-contain-style:  ;\n}\n\n::backdrop {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-gradient-from-position:  ;\n  --tw-gradient-via-position:  ;\n  --tw-gradient-to-position:  ;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n  --tw-contain-size:  ;\n  --tw-contain-layout:  ;\n  --tw-contain-paint:  ;\n  --tw-contain-style:  ;\n}/*\n! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com\n*//*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n\n::before,\n::after {\n  --tw-content: '';\n}\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n5. Use the user's configured `sans` font-feature-settings by default.\n6. Use the user's configured `sans` font-variation-settings by default.\n7. Disable tap highlights on iOS\n*/\n\nhtml,\n:host {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 4 */\n  font-feature-settings: normal; /* 5 */\n  font-variation-settings: normal; /* 6 */\n  -webkit-tap-highlight-color: transparent; /* 7 */\n}\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\n\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\n\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\n\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n/*\nRemove the default font size and weight for headings.\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/*\n1. Use the user's configured `mono` font-family by default.\n2. Use the user's configured `mono` font-feature-settings by default.\n3. Use the user's configured `mono` font-variation-settings by default.\n4. Correct the odd `em` font sizing in all browsers.\n*/\n\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-feature-settings: normal; /* 2 */\n  font-variation-settings: normal; /* 3 */\n  font-size: 1em; /* 4 */\n}\n\n/*\nAdd the correct font size in all browsers.\n*/\n\nsmall {\n  font-size: 80%;\n}\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\n\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-feature-settings: inherit; /* 1 */\n  font-variation-settings: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  font-weight: inherit; /* 1 */\n  line-height: inherit; /* 1 */\n  letter-spacing: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\n\nbutton,\ninput:where([type='button']),\ninput:where([type='reset']),\ninput:where([type='submit']) {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n\n:-moz-focusring {\n  outline: auto;\n}\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\n\nprogress {\n  vertical-align: baseline;\n}\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\n\nsummary {\n  display: list-item;\n}\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nlegend {\n  padding: 0;\n}\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/*\nReset default styling for dialogs.\n*/\ndialog {\n  padding: 0;\n}\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n/*\nSet the default cursor for buttons.\n*/\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/* Make elements with the HTML hidden attribute stay hidden by default */\n[hidden]:where(:not([hidden=\"until-found\"])) {\n  display: none;\n}\n.container {\n  width: 100%;\n}\n@media (min-width: 640px) {\n\n  .container {\n    max-width: 640px;\n  }\n}\n@media (min-width: 768px) {\n\n  .container {\n    max-width: 768px;\n  }\n}\n@media (min-width: 1024px) {\n\n  .container {\n    max-width: 1024px;\n  }\n}\n@media (min-width: 1280px) {\n\n  .container {\n    max-width: 1280px;\n  }\n}\n@media (min-width: 1536px) {\n\n  .container {\n    max-width: 1536px;\n  }\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n.fixed {\n  position: fixed;\n}\n.absolute {\n  position: absolute;\n}\n.relative {\n  position: relative;\n}\n.sticky {\n  position: sticky;\n}\n.inset-0 {\n  inset: 0px;\n}\n.bottom-0 {\n  bottom: 0px;\n}\n.bottom-4 {\n  bottom: 1rem;\n}\n.left-0 {\n  left: 0px;\n}\n.left-1\\/2 {\n  left: 50%;\n}\n.top-0 {\n  top: 0px;\n}\n.top-5 {\n  top: 1.25rem;\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.mx-auto {\n  margin-left: auto;\n  margin-right: auto;\n}\n.my-2 {\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n.mb-1 {\n  margin-bottom: 0.25rem;\n}\n.ml-px {\n  margin-left: 1px;\n}\n.mt-1 {\n  margin-top: 0.25rem;\n}\n.mt-4 {\n  margin-top: 1rem;\n}\n.inline-block {\n  display: inline-block;\n}\n.flex {\n  display: flex;\n}\n.inline-flex {\n  display: inline-flex;\n}\n.h-12 {\n  height: 3rem;\n}\n.h-full {\n  height: 100%;\n}\n.h-screen {\n  height: 100vh;\n}\n.max-h-\\[300px\\] {\n  max-height: 300px;\n}\n.max-h-\\[80vh\\] {\n  max-height: 80vh;\n}\n.min-h-\\[40px\\] {\n  min-height: 40px;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-72 {\n  width: 18rem;\n}\n.w-\\[72px\\] {\n  width: 72px;\n}\n.w-full {\n  width: 100%;\n}\n.max-w-2xl {\n  max-width: 42rem;\n}\n.max-w-3xl {\n  max-width: 48rem;\n}\n.max-w-7xl {\n  max-width: 80rem;\n}\n.max-w-\\[75ch\\] {\n  max-width: 75ch;\n}\n.max-w-none {\n  max-width: none;\n}\n.flex-1 {\n  flex: 1 1 0%;\n}\n.-translate-x-1\\/2 {\n  --tw-translate-x: -50%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.cursor-text {\n  cursor: text;\n}\n.resize-none {\n  resize: none;\n}\n.flex-col {\n  flex-direction: column;\n}\n.items-center {\n  align-items: center;\n}\n.items-stretch {\n  align-items: stretch;\n}\n.justify-center {\n  justify-content: center;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.gap-1\\.5 {\n  gap: 0.375rem;\n}\n.gap-2 {\n  gap: 0.5rem;\n}\n.gap-3 {\n  gap: 0.75rem;\n}\n.gap-6 {\n  gap: 1.5rem;\n}\n.gap-8 {\n  gap: 2rem;\n}\n.space-x-3 > :not([hidden]) ~ :not([hidden]) {\n  --tw-space-x-reverse: 0;\n  margin-right: calc(0.75rem * var(--tw-space-x-reverse));\n  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));\n}\n.space-y-2 > :not([hidden]) ~ :not([hidden]) {\n  --tw-space-y-reverse: 0;\n  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));\n  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));\n}\n.overflow-auto {\n  overflow: auto;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.overflow-x-auto {\n  overflow-x: auto;\n}\n.overflow-x-hidden {\n  overflow-x: hidden;\n}\n.overflow-y-scroll {\n  overflow-y: scroll;\n}\n.whitespace-pre-wrap {\n  white-space: pre-wrap;\n}\n.break-words {\n  overflow-wrap: break-word;\n}\n.rounded-2xl {\n  border-radius: 1rem;\n}\n.rounded-lg {\n  border-radius: 0.5rem;\n}\n.rounded-md {\n  border-radius: 0.375rem;\n}\n.rounded-xl {\n  border-radius: 0.75rem;\n}\n.border {\n  border-width: 1px;\n}\n.border-b {\n  border-bottom-width: 1px;\n}\n.bg-black {\n  --tw-bg-opacity: 1;\n  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));\n}\n.bg-black\\/50 {\n  background-color: rgb(0 0 0 / 0.5);\n}\n.bg-gray-50 {\n  --tw-bg-opacity: 1;\n  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));\n}\n.bg-white {\n  --tw-bg-opacity: 1;\n  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));\n}\n.p-2 {\n  padding: 0.5rem;\n}\n.p-4 {\n  padding: 1rem;\n}\n.px-3 {\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n}\n.px-4 {\n  padding-left: 1rem;\n  padding-right: 1rem;\n}\n.py-2 {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n.py-2\\.5 {\n  padding-top: 0.625rem;\n  padding-bottom: 0.625rem;\n}\n.pb-2\\.5 {\n  padding-bottom: 0.625rem;\n}\n.pb-20 {\n  padding-bottom: 5rem;\n}\n.pl-2\\.5 {\n  padding-left: 0.625rem;\n}\n.pl-4 {\n  padding-left: 1rem;\n}\n.pl-\\[4\\.5rem\\] {\n  padding-left: 4.5rem;\n}\n.pr-2\\.5 {\n  padding-right: 0.625rem;\n}\n.pr-6 {\n  padding-right: 1.5rem;\n}\n.pt-1 {\n  padding-top: 0.25rem;\n}\n.pt-12 {\n  padding-top: 3rem;\n}\n.pt-2\\.5 {\n  padding-top: 0.625rem;\n}\n.pt-6 {\n  padding-top: 1.5rem;\n}\n.text-sm {\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.font-medium {\n  font-weight: 500;\n}\n.font-semibold {\n  font-weight: 600;\n}\n.text-gray-600 {\n  --tw-text-opacity: 1;\n  color: rgb(75 85 99 / var(--tw-text-opacity, 1));\n}\n.text-white {\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity, 1));\n}\n.opacity-0 {\n  opacity: 0;\n}\n.opacity-100 {\n  opacity: 1;\n}\n.opacity-50 {\n  opacity: 0.5;\n}\n.shadow-\\[0_0\\.25rem_1\\.25rem_rgba\\(0\\2c 0\\2c 0\\2c 0\\.035\\)\\] {\n  --tw-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.035);\n  --tw-shadow-colored: 0 0.25rem 1.25rem var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.shadow-lg {\n  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.shadow-xl {\n  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.backdrop-blur {\n  --tw-backdrop-blur: blur(8px);\n  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.transition-colors {\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.transition-opacity {\n  transition-property: opacity;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.duration-200 {\n  transition-duration: 200ms;\n}\n.duration-300 {\n  transition-duration: 300ms;\n}\n.focus-within\\:shadow-\\[0_0\\.25rem_1\\.25rem_rgba\\(0\\2c 0\\2c 0\\2c 0\\.075\\)\\]:focus-within {\n  --tw-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.075);\n  --tw-shadow-colored: 0 0.25rem 1.25rem var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.hover\\:bg-black:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));\n}\n.hover\\:bg-gray-100:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));\n}\n@media (min-width: 640px) {\n\n  .sm\\:mx-0 {\n    margin-left: 0px;\n    margin-right: 0px;\n  }\n}\n@media (min-width: 768px) {\n\n  .md\\:sticky {\n    position: sticky;\n  }\n\n  .md\\:px-2 {\n    padding-left: 0.5rem;\n    padding-right: 0.5rem;\n  }\n\n  .md\\:pl-8 {\n    padding-left: 2rem;\n  }\n\n  .md\\:pr-14 {\n    padding-right: 3.5rem;\n  }\n\n  .md\\:pr-8 {\n    padding-right: 2rem;\n  }\n}\n@media (min-width: 1024px) {\n\n  .lg\\:mt-6 {\n    margin-top: 1.5rem;\n  }\n}\n@media (min-width: 1536px) {\n\n  .\\32xl\\:pr-20 {\n    padding-right: 5rem;\n  }\n}\n",
+                    "*, ::before, ::after {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-gradient-from-position:  ;\n  --tw-gradient-via-position:  ;\n  --tw-gradient-to-position:  ;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n  --tw-contain-size:  ;\n  --tw-contain-layout:  ;\n  --tw-contain-paint:  ;\n  --tw-contain-style:  ;\n}\n\n::backdrop {\n  --tw-border-spacing-x: 0;\n  --tw-border-spacing-y: 0;\n  --tw-translate-x: 0;\n  --tw-translate-y: 0;\n  --tw-rotate: 0;\n  --tw-skew-x: 0;\n  --tw-skew-y: 0;\n  --tw-scale-x: 1;\n  --tw-scale-y: 1;\n  --tw-pan-x:  ;\n  --tw-pan-y:  ;\n  --tw-pinch-zoom:  ;\n  --tw-scroll-snap-strictness: proximity;\n  --tw-gradient-from-position:  ;\n  --tw-gradient-via-position:  ;\n  --tw-gradient-to-position:  ;\n  --tw-ordinal:  ;\n  --tw-slashed-zero:  ;\n  --tw-numeric-figure:  ;\n  --tw-numeric-spacing:  ;\n  --tw-numeric-fraction:  ;\n  --tw-ring-inset:  ;\n  --tw-ring-offset-width: 0px;\n  --tw-ring-offset-color: #fff;\n  --tw-ring-color: rgb(59 130 246 / 0.5);\n  --tw-ring-offset-shadow: 0 0 #0000;\n  --tw-ring-shadow: 0 0 #0000;\n  --tw-shadow: 0 0 #0000;\n  --tw-shadow-colored: 0 0 #0000;\n  --tw-blur:  ;\n  --tw-brightness:  ;\n  --tw-contrast:  ;\n  --tw-grayscale:  ;\n  --tw-hue-rotate:  ;\n  --tw-invert:  ;\n  --tw-saturate:  ;\n  --tw-sepia:  ;\n  --tw-drop-shadow:  ;\n  --tw-backdrop-blur:  ;\n  --tw-backdrop-brightness:  ;\n  --tw-backdrop-contrast:  ;\n  --tw-backdrop-grayscale:  ;\n  --tw-backdrop-hue-rotate:  ;\n  --tw-backdrop-invert:  ;\n  --tw-backdrop-opacity:  ;\n  --tw-backdrop-saturate:  ;\n  --tw-backdrop-sepia:  ;\n  --tw-contain-size:  ;\n  --tw-contain-layout:  ;\n  --tw-contain-paint:  ;\n  --tw-contain-style:  ;\n}/*\n! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com\n*//*\n1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)\n2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)\n*/\n\n*,\n::before,\n::after {\n  box-sizing: border-box; /* 1 */\n  border-width: 0; /* 2 */\n  border-style: solid; /* 2 */\n  border-color: #e5e7eb; /* 2 */\n}\n\n::before,\n::after {\n  --tw-content: '';\n}\n\n/*\n1. Use a consistent sensible line-height in all browsers.\n2. Prevent adjustments of font size after orientation changes in iOS.\n3. Use a more readable tab size.\n4. Use the user's configured `sans` font-family by default.\n5. Use the user's configured `sans` font-feature-settings by default.\n6. Use the user's configured `sans` font-variation-settings by default.\n7. Disable tap highlights on iOS\n*/\n\nhtml,\n:host {\n  line-height: 1.5; /* 1 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n  -moz-tab-size: 4; /* 3 */\n  -o-tab-size: 4;\n     tab-size: 4; /* 3 */\n  font-family: ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"; /* 4 */\n  font-feature-settings: normal; /* 5 */\n  font-variation-settings: normal; /* 6 */\n  -webkit-tap-highlight-color: transparent; /* 7 */\n}\n\n/*\n1. Remove the margin in all browsers.\n2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.\n*/\n\nbody {\n  margin: 0; /* 1 */\n  line-height: inherit; /* 2 */\n}\n\n/*\n1. Add the correct height in Firefox.\n2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)\n3. Ensure horizontal rules are visible by default.\n*/\n\nhr {\n  height: 0; /* 1 */\n  color: inherit; /* 2 */\n  border-top-width: 1px; /* 3 */\n}\n\n/*\nAdd the correct text decoration in Chrome, Edge, and Safari.\n*/\n\nabbr:where([title]) {\n  -webkit-text-decoration: underline dotted;\n          text-decoration: underline dotted;\n}\n\n/*\nRemove the default font size and weight for headings.\n*/\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-size: inherit;\n  font-weight: inherit;\n}\n\n/*\nReset links to optimize for opt-in styling instead of opt-out.\n*/\n\na {\n  color: inherit;\n  text-decoration: inherit;\n}\n\n/*\nAdd the correct font weight in Edge and Safari.\n*/\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/*\n1. Use the user's configured `mono` font-family by default.\n2. Use the user's configured `mono` font-feature-settings by default.\n3. Use the user's configured `mono` font-variation-settings by default.\n4. Correct the odd `em` font sizing in all browsers.\n*/\n\ncode,\nkbd,\nsamp,\npre {\n  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace; /* 1 */\n  font-feature-settings: normal; /* 2 */\n  font-variation-settings: normal; /* 3 */\n  font-size: 1em; /* 4 */\n}\n\n/*\nAdd the correct font size in all browsers.\n*/\n\nsmall {\n  font-size: 80%;\n}\n\n/*\nPrevent `sub` and `sup` elements from affecting the line height in all browsers.\n*/\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/*\n1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)\n2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)\n3. Remove gaps between table borders by default.\n*/\n\ntable {\n  text-indent: 0; /* 1 */\n  border-color: inherit; /* 2 */\n  border-collapse: collapse; /* 3 */\n}\n\n/*\n1. Change the font styles in all browsers.\n2. Remove the margin in Firefox and Safari.\n3. Remove default padding in all browsers.\n*/\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit; /* 1 */\n  font-feature-settings: inherit; /* 1 */\n  font-variation-settings: inherit; /* 1 */\n  font-size: 100%; /* 1 */\n  font-weight: inherit; /* 1 */\n  line-height: inherit; /* 1 */\n  letter-spacing: inherit; /* 1 */\n  color: inherit; /* 1 */\n  margin: 0; /* 2 */\n  padding: 0; /* 3 */\n}\n\n/*\nRemove the inheritance of text transform in Edge and Firefox.\n*/\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Remove default button styles.\n*/\n\nbutton,\ninput:where([type='button']),\ninput:where([type='reset']),\ninput:where([type='submit']) {\n  -webkit-appearance: button; /* 1 */\n  background-color: transparent; /* 2 */\n  background-image: none; /* 2 */\n}\n\n/*\nUse the modern Firefox focus style for all focusable elements.\n*/\n\n:-moz-focusring {\n  outline: auto;\n}\n\n/*\nRemove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)\n*/\n\n:-moz-ui-invalid {\n  box-shadow: none;\n}\n\n/*\nAdd the correct vertical alignment in Chrome and Firefox.\n*/\n\nprogress {\n  vertical-align: baseline;\n}\n\n/*\nCorrect the cursor style of increment and decrement buttons in Safari.\n*/\n\n::-webkit-inner-spin-button,\n::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/*\n1. Correct the odd appearance in Chrome and Safari.\n2. Correct the outline style in Safari.\n*/\n\n[type='search'] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/*\nRemove the inner padding in Chrome and Safari on macOS.\n*/\n\n::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/*\n1. Correct the inability to style clickable types in iOS and Safari.\n2. Change font properties to `inherit` in Safari.\n*/\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/*\nAdd the correct display in Chrome and Safari.\n*/\n\nsummary {\n  display: list-item;\n}\n\n/*\nRemoves the default spacing and border for appropriate elements.\n*/\n\nblockquote,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nhr,\nfigure,\np,\npre {\n  margin: 0;\n}\n\nfieldset {\n  margin: 0;\n  padding: 0;\n}\n\nlegend {\n  padding: 0;\n}\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/*\nReset default styling for dialogs.\n*/\ndialog {\n  padding: 0;\n}\n\n/*\nPrevent resizing textareas horizontally by default.\n*/\n\ntextarea {\n  resize: vertical;\n}\n\n/*\n1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)\n2. Set the default placeholder color to the user's configured gray 400 color.\n*/\n\ninput::-moz-placeholder, textarea::-moz-placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\ninput::placeholder,\ntextarea::placeholder {\n  opacity: 1; /* 1 */\n  color: #9ca3af; /* 2 */\n}\n\n/*\nSet the default cursor for buttons.\n*/\n\nbutton,\n[role=\"button\"] {\n  cursor: pointer;\n}\n\n/*\nMake sure disabled buttons don't get the pointer cursor.\n*/\n:disabled {\n  cursor: default;\n}\n\n/*\n1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)\n2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)\n   This can trigger a poorly considered lint error in some tools but is included by design.\n*/\n\nimg,\nsvg,\nvideo,\ncanvas,\naudio,\niframe,\nembed,\nobject {\n  display: block; /* 1 */\n  vertical-align: middle; /* 2 */\n}\n\n/*\nConstrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)\n*/\n\nimg,\nvideo {\n  max-width: 100%;\n  height: auto;\n}\n\n/* Make elements with the HTML hidden attribute stay hidden by default */\n[hidden]:where(:not([hidden=\"until-found\"])) {\n  display: none;\n}\n.container {\n  width: 100%;\n}\n@media (min-width: 640px) {\n\n  .container {\n    max-width: 640px;\n  }\n}\n@media (min-width: 768px) {\n\n  .container {\n    max-width: 768px;\n  }\n}\n@media (min-width: 1024px) {\n\n  .container {\n    max-width: 1024px;\n  }\n}\n@media (min-width: 1280px) {\n\n  .container {\n    max-width: 1280px;\n  }\n}\n@media (min-width: 1536px) {\n\n  .container {\n    max-width: 1536px;\n  }\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  padding: 0;\n  margin: -1px;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  white-space: nowrap;\n  border-width: 0;\n}\n.fixed {\n  position: fixed;\n}\n.absolute {\n  position: absolute;\n}\n.relative {\n  position: relative;\n}\n.sticky {\n  position: sticky;\n}\n.bottom-0 {\n  bottom: 0px;\n}\n.bottom-4 {\n  bottom: 1rem;\n}\n.left-0 {\n  left: 0px;\n}\n.left-1\\/2 {\n  left: 50%;\n}\n.right-0 {\n  right: 0px;\n}\n.top-0 {\n  top: 0px;\n}\n.top-5 {\n  top: 1.25rem;\n}\n.z-10 {\n  z-index: 10;\n}\n.z-50 {\n  z-index: 50;\n}\n.mx-auto {\n  margin-left: auto;\n  margin-right: auto;\n}\n.my-2 {\n  margin-top: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n.mb-1 {\n  margin-bottom: 0.25rem;\n}\n.ml-0 {\n  margin-left: 0px;\n}\n.ml-16 {\n  margin-left: 4rem;\n}\n.ml-4 {\n  margin-left: 1rem;\n}\n.ml-px {\n  margin-left: 1px;\n}\n.mt-1 {\n  margin-top: 0.25rem;\n}\n.mt-4 {\n  margin-top: 1rem;\n}\n.inline-block {\n  display: inline-block;\n}\n.flex {\n  display: flex;\n}\n.inline-flex {\n  display: inline-flex;\n}\n.h-12 {\n  height: 3rem;\n}\n.h-5\\/6 {\n  height: 83.333333%;\n}\n.h-full {\n  height: 100%;\n}\n.h-screen {\n  height: 100vh;\n}\n.max-h-\\[300px\\] {\n  max-height: 300px;\n}\n.min-h-\\[40px\\] {\n  min-height: 40px;\n}\n.min-h-screen {\n  min-height: 100vh;\n}\n.w-16 {\n  width: 4rem;\n}\n.w-7\\/12 {\n  width: 58.333333%;\n}\n.w-72 {\n  width: 18rem;\n}\n.w-full {\n  width: 100%;\n}\n.min-w-0 {\n  min-width: 0px;\n}\n.min-w-max {\n  min-width: -moz-max-content;\n  min-width: max-content;\n}\n.max-w-2xl {\n  max-width: 42rem;\n}\n.max-w-3xl {\n  max-width: 48rem;\n}\n.max-w-7xl {\n  max-width: 80rem;\n}\n.max-w-\\[75ch\\] {\n  max-width: 75ch;\n}\n.max-w-none {\n  max-width: none;\n}\n.flex-1 {\n  flex: 1 1 0%;\n}\n.-translate-x-1\\/2 {\n  --tw-translate-x: -50%;\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.transform {\n  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));\n}\n.cursor-text {\n  cursor: text;\n}\n.resize-none {\n  resize: none;\n}\n.flex-col {\n  flex-direction: column;\n}\n.items-center {\n  align-items: center;\n}\n.items-stretch {\n  align-items: stretch;\n}\n.justify-center {\n  justify-content: center;\n}\n.justify-between {\n  justify-content: space-between;\n}\n.gap-1\\.5 {\n  gap: 0.375rem;\n}\n.gap-2 {\n  gap: 0.5rem;\n}\n.gap-3 {\n  gap: 0.75rem;\n}\n.gap-6 {\n  gap: 1.5rem;\n}\n.gap-8 {\n  gap: 2rem;\n}\n.space-x-3 > :not([hidden]) ~ :not([hidden]) {\n  --tw-space-x-reverse: 0;\n  margin-right: calc(0.75rem * var(--tw-space-x-reverse));\n  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));\n}\n.space-y-2 > :not([hidden]) ~ :not([hidden]) {\n  --tw-space-y-reverse: 0;\n  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));\n  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));\n}\n.overflow-auto {\n  overflow: auto;\n}\n.overflow-hidden {\n  overflow: hidden;\n}\n.overflow-x-auto {\n  overflow-x: auto;\n}\n.overflow-x-hidden {\n  overflow-x: hidden;\n}\n.overflow-y-scroll {\n  overflow-y: scroll;\n}\n.whitespace-pre-wrap {\n  white-space: pre-wrap;\n}\n.break-words {\n  overflow-wrap: break-word;\n}\n.rounded-2xl {\n  border-radius: 1rem;\n}\n.rounded-md {\n  border-radius: 0.375rem;\n}\n.rounded-xl {\n  border-radius: 0.75rem;\n}\n.border {\n  border-width: 1px;\n}\n.border-b {\n  border-bottom-width: 1px;\n}\n.bg-black {\n  --tw-bg-opacity: 1;\n  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));\n}\n.p-2 {\n  padding: 0.5rem;\n}\n.p-4 {\n  padding: 1rem;\n}\n.px-3 {\n  padding-left: 0.75rem;\n  padding-right: 0.75rem;\n}\n.px-4 {\n  padding-left: 1rem;\n  padding-right: 1rem;\n}\n.py-2 {\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n}\n.py-2\\.5 {\n  padding-top: 0.625rem;\n  padding-bottom: 0.625rem;\n}\n.pb-2\\.5 {\n  padding-bottom: 0.625rem;\n}\n.pb-20 {\n  padding-bottom: 5rem;\n}\n.pl-2\\.5 {\n  padding-left: 0.625rem;\n}\n.pl-4 {\n  padding-left: 1rem;\n}\n.pl-\\[4\\.5rem\\] {\n  padding-left: 4.5rem;\n}\n.pr-2\\.5 {\n  padding-right: 0.625rem;\n}\n.pr-6 {\n  padding-right: 1.5rem;\n}\n.pt-1 {\n  padding-top: 0.25rem;\n}\n.pt-12 {\n  padding-top: 3rem;\n}\n.pt-2\\.5 {\n  padding-top: 0.625rem;\n}\n.pt-6 {\n  padding-top: 1.5rem;\n}\n.text-sm {\n  font-size: 0.875rem;\n  line-height: 1.25rem;\n}\n.font-medium {\n  font-weight: 500;\n}\n.font-semibold {\n  font-weight: 600;\n}\n.text-white {\n  --tw-text-opacity: 1;\n  color: rgb(255 255 255 / var(--tw-text-opacity, 1));\n}\n.opacity-0 {\n  opacity: 0;\n}\n.opacity-100 {\n  opacity: 1;\n}\n.opacity-50 {\n  opacity: 0.5;\n}\n.shadow-\\[0_0\\.25rem_1\\.25rem_rgba\\(0\\2c 0\\2c 0\\2c 0\\.035\\)\\] {\n  --tw-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.035);\n  --tw-shadow-colored: 0 0.25rem 1.25rem var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.shadow-lg {\n  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);\n  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.backdrop-blur {\n  --tw-backdrop-blur: blur(8px);\n  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);\n}\n.transition-all {\n  transition-property: all;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.transition-colors {\n  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.transition-opacity {\n  transition-property: opacity;\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n  transition-duration: 150ms;\n}\n.duration-200 {\n  transition-duration: 200ms;\n}\n.duration-300 {\n  transition-duration: 300ms;\n}\n.ease-in-out {\n  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\n}\n.focus-within\\:shadow-\\[0_0\\.25rem_1\\.25rem_rgba\\(0\\2c 0\\2c 0\\2c 0\\.075\\)\\]:focus-within {\n  --tw-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.075);\n  --tw-shadow-colored: 0 0.25rem 1.25rem var(--tw-shadow-color);\n  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);\n}\n.hover\\:bg-black:hover {\n  --tw-bg-opacity: 1;\n  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));\n}\n@media (min-width: 640px) {\n\n  .sm\\:mx-0 {\n    margin-left: 0px;\n    margin-right: 0px;\n  }\n}\n@media (min-width: 768px) {\n\n  .md\\:sticky {\n    position: sticky;\n  }\n\n  .md\\:w-\\[calc\\(50vw-2\\.5rem\\)\\] {\n    width: calc(50vw - 2.5rem);\n  }\n\n  .md\\:px-2 {\n    padding-left: 0.5rem;\n    padding-right: 0.5rem;\n  }\n\n  .md\\:pl-8 {\n    padding-left: 2rem;\n  }\n\n  .md\\:pr-14 {\n    padding-right: 3.5rem;\n  }\n\n  .md\\:pr-8 {\n    padding-right: 2rem;\n  }\n}\n@media (min-width: 1024px) {\n\n  .lg\\:mt-6 {\n    margin-top: 1.5rem;\n  }\n}\n@media (min-width: 1536px) {\n\n  .\\32xl\\:pr-20 {\n    padding-right: 5rem;\n  }\n}\n",
                     "",
                 ]);
                 const i = o;
@@ -16189,7 +16189,11 @@
                     ),
                 ),
             ),
-        $e = (...e) =>
+        $e = (0, r.createContext)({
+            openArtifact: null,
+            setOpenArtifact: () => {},
+        }),
+        Ie = (...e) =>
             e
                 .filter(
                     (e, t, n) =>
@@ -16197,7 +16201,7 @@
                 )
                 .join(" ")
                 .trim();
-    var Ie = {
+    var Ue = {
         xmlns: "http://www.w3.org/2000/svg",
         width: 24,
         height: 24,
@@ -16208,7 +16212,7 @@
         strokeLinecap: "round",
         strokeLinejoin: "round",
     };
-    const Ue = (0, r.forwardRef)(
+    const je = (0, r.forwardRef)(
             (
                 {
                     color: e = "currentColor",
@@ -16226,12 +16230,12 @@
                     "svg",
                     {
                         ref: s,
-                        ...Ie,
+                        ...Ue,
                         width: t,
                         height: t,
                         stroke: e,
                         strokeWidth: a ? (24 * Number(n)) / Number(t) : n,
-                        className: $e("lucide", l),
+                        className: Ie("lucide", l),
                         ...u,
                     },
                     [
@@ -16240,12 +16244,12 @@
                     ],
                 ),
         ),
-        je = (e, t) => {
+        He = (e, t) => {
             const n = (0, r.forwardRef)(({ className: n, ...a }, l) => {
-                return (0, r.createElement)(Ue, {
+                return (0, r.createElement)(je, {
                     ref: l,
                     iconNode: t,
-                    className: $e(
+                    className: Ie(
                         `lucide-${
                             ((o = e),
                             o
@@ -16260,7 +16264,7 @@
             });
             return (n.displayName = `${e}`), n;
         },
-        He = je("ExternalLink", [
+        Be = He("ExternalLink", [
             ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
             ["path", { d: "M10 14 21 3", key: "gplh6r" }],
             [
@@ -16271,32 +16275,7 @@
                 },
             ],
         ]),
-        Be = je("Copy", [
-            [
-                "rect",
-                {
-                    width: "14",
-                    height: "14",
-                    x: "8",
-                    y: "8",
-                    rx: "2",
-                    ry: "2",
-                    key: "17jyea",
-                },
-            ],
-            [
-                "path",
-                {
-                    d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
-                    key: "zix9uf",
-                },
-            ],
-        ]),
-        We = je("X", [
-            ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
-            ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
-        ]),
-        Ve = ({ artifact: e, onOpen: t }) =>
+        We = ({ artifact: e, onOpen: t }) =>
             r.createElement(
                 "div",
                 { className: "flex items-center gap-2 my-2" },
@@ -16305,146 +16284,31 @@
                     {
                         onClick: t,
                         className:
-                            "artifact-button inline-flex items-center gap-2 px-4 py-2 rounded-md",
+                            "artifact-button inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm",
                     },
-                    r.createElement(He, { size: 16 }),
-                    "Open",
-                    " ",
-                    "application/vnd.ant.code" === e.type ? "code" : "artifact",
-                ),
-                r.createElement(
-                    "span",
-                    { className: "text-sm text-gray-600" },
-                    e.title,
+                    r.createElement(Be, { size: 16 }),
+                    r.createElement(
+                        "span",
+                        null,
+                        "Open ",
+                        "application/vnd.ant.code" === e.type
+                            ? "code"
+                            : "artifact",
+                        ":",
+                        " ",
+                        e.title,
+                    ),
                 ),
             ),
-        qe = ({ artifact: e, onClose: t }) => {
-            const [n, a] = (0, r.useState)(!1);
-            return r.createElement(
-                "div",
-                {
-                    className:
-                        "fixed inset-0 bg-black/50 flex items-center justify-center z-50",
-                },
-                r.createElement(
-                    "div",
-                    {
-                        className:
-                            "bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[80vh] flex flex-col",
-                    },
-                    r.createElement(
-                        "div",
-                        {
-                            className:
-                                "flex items-center justify-between p-4 border-b",
-                        },
-                        r.createElement(
-                            "div",
-                            null,
-                            r.createElement(
-                                "h2",
-                                { className: "font-semibold" },
-                                e.title,
-                            ),
-                            r.createElement(
-                                "p",
-                                { className: "text-sm text-gray-600" },
-                                "ID: ",
-                                e.identifier,
-                            ),
-                        ),
-                        r.createElement(
-                            "div",
-                            { className: "flex items-center gap-2" },
-                            r.createElement(
-                                "button",
-                                {
-                                    onClick: () => {
-                                        navigator.clipboard.writeText(
-                                            e.content,
-                                        ),
-                                            a(!0),
-                                            setTimeout(() => a(!1), 2e3);
-                                    },
-                                    className:
-                                        "p-2 hover:bg-gray-100 rounded-md transition-colors",
-                                    title: "Copy content",
-                                },
-                                r.createElement(Be, { size: 16 }),
-                                r.createElement(
-                                    "span",
-                                    { className: "sr-only" },
-                                    "Copy content",
-                                ),
-                            ),
-                            r.createElement(
-                                "button",
-                                {
-                                    onClick: t,
-                                    className:
-                                        "p-2 hover:bg-gray-100 rounded-md transition-colors",
-                                    title: "Close",
-                                },
-                                r.createElement(We, { size: 16 }),
-                                r.createElement(
-                                    "span",
-                                    { className: "sr-only" },
-                                    "Close",
-                                ),
-                            ),
-                        ),
-                    ),
-                    r.createElement(
-                        "div",
-                        { className: "flex-1 overflow-auto p-4" },
-                        "application/vnd.ant.code" === e.type &&
-                            r.createElement(
-                                "pre",
-                                {
-                                    className:
-                                        "bg-gray-50 p-4 rounded-md overflow-x-auto",
-                                },
-                                r.createElement("code", null, e.content),
-                            ),
-                        "text/markdown" === e.type &&
-                            r.createElement(
-                                "div",
-                                { className: "prose max-w-none" },
-                                e.content,
-                            ),
-                        "image/svg+xml" === e.type &&
-                            r.createElement(
-                                "div",
-                                { className: "flex justify-center" },
-                                r.createElement("div", {
-                                    dangerouslySetInnerHTML: {
-                                        __html: e.content,
-                                    },
-                                }),
-                            ),
-                    ),
-                    n &&
-                        r.createElement(
-                            "div",
-                            {
-                                className:
-                                    "absolute bottom-4 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md",
-                            },
-                            "Copied to clipboard!",
-                        ),
-                ),
-            );
-        },
-        Qe = ({ artifact: e }) => {
-            const [t, n] = (0, r.useState)(!1);
+        Ve = ({ artifact: e }) => {
+            const { setOpenArtifact: t } = (0, r.useContext)($e);
             return r.createElement(
                 r.Fragment,
                 null,
-                r.createElement(Ve, { artifact: e, onOpen: () => n(!0) }),
-                t && r.createElement(qe, { artifact: e, onClose: () => n(!1) }),
+                r.createElement(We, { artifact: e, onOpen: () => t(e) }),
             );
         },
-        Ke = ({ content: e }) => {
+        qe = ({ content: e }) => {
             const t = r.useMemo(
                 () =>
                     ((e) => {
@@ -16498,7 +16362,7 @@
                 { className: "message-content" },
                 t.map((e, t) =>
                     "artifact" === e.type
-                        ? r.createElement(Qe, {
+                        ? r.createElement(Ve, {
                               key: `artifact-${t}`,
                               artifact: {
                                   identifier: e.attributes?.identifier,
@@ -16518,7 +16382,7 @@
                 ),
             );
         },
-        Ye = ({ message: e }) =>
+        Qe = ({ message: e }) =>
             r.createElement(
                 "div",
                 { className: "mb-1 mt-1" },
@@ -16528,10 +16392,10 @@
                         className:
                             "message-container-bot relative rounded-xl ml-px pl-2.5 py-2.5 break-words max-w-[75ch] flex-col pr-6",
                     },
-                    r.createElement(Ke, { content: e }),
+                    r.createElement(qe, { content: e }),
                 ),
             ),
-        Xe = () => {
+        Ke = () => {
             const [e, t] = (0, r.useState)([]),
                 n = Y();
             (0, r.useEffect)(() => {
@@ -16574,24 +16438,26 @@
                 ),
             );
         },
-        Ge = () => {
+        Ye = () => {
             const [e, t] = (0, r.useState)(!1),
                 [n, a] = (0, r.useState)(!1),
-                l = e || n ? "w-72" : "w-[72px]",
+                l = e || n ? "w-72" : "w-16",
                 o = e ? "opacity-100" : n ? "opacity-50" : "opacity-0";
             return r.createElement(
                 "nav",
                 {
-                    className: `fixed left-0 top-0 h-screen shadow-lg transition-colors duration-300 backdrop-blur rounded-xl z-50 ${l}`,
+                    className: `fixed left-0 top-0 h-screen shadow-lg transition-all duration-300 backdrop-blur rounded-xl z-50 ${l}`,
                     onMouseEnter: () => a(!0),
                     onMouseLeave: () => a(!1),
                 },
                 r.createElement(
                     "div",
-                    { className: "h-full flex flex-col w-72 p-4 gap-6" },
+                    {
+                        className: `h-full flex flex-col ${l} p-4 gap-6 overflow-hidden`,
+                    },
                     r.createElement(
                         "div",
-                        { className: "flex items-center h-12" },
+                        { className: "flex items-center h-12 min-w-max" },
                         r.createElement(
                             "span",
                             { className: "font-medium" },
@@ -16601,7 +16467,7 @@
                     r.createElement(
                         "div",
                         {
-                            className: `transition-opacity duration-300 h-12 ${o}`,
+                            className: `transition-opacity duration-300 h-12 min-w-max ${o}`,
                         },
                         r.createElement(
                             "a",
@@ -16616,14 +16482,187 @@
                     r.createElement(
                         "div",
                         {
-                            className: `transition-opacity overflow-y-scroll duration-300 ${o}`,
+                            className: `transition-opacity overflow-y-scroll duration-300 min-w-max ${o}`,
                         },
-                        r.createElement(Xe, null),
+                        r.createElement(Ke, null),
                     ),
                 ),
             );
         },
-        Je = ({ initialThreadId: e }) => {
+        Xe = He("Copy", [
+            [
+                "rect",
+                {
+                    width: "14",
+                    height: "14",
+                    x: "8",
+                    y: "8",
+                    rx: "2",
+                    ry: "2",
+                    key: "17jyea",
+                },
+            ],
+            [
+                "path",
+                {
+                    d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2",
+                    key: "zix9uf",
+                },
+            ],
+        ]),
+        Ge = He("X", [
+            ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
+            ["path", { d: "m6 6 12 12", key: "d8bk6v" }],
+        ]),
+        Je = ({ content: e }) =>
+            r.createElement(
+                "pre",
+                {
+                    className:
+                        "sidepanel-code-renderer p-4 rounded-md overflow-x-auto",
+                },
+                r.createElement("code", null, e),
+            ),
+        Ze = ({ content: e }) =>
+            r.createElement("div", { className: "prose max-w-none" }, e),
+        et = ({ content: e }) =>
+            r.createElement(
+                "div",
+                { className: "flex justify-center" },
+                r.createElement("div", {
+                    dangerouslySetInnerHTML: { __html: e },
+                }),
+            ),
+        tt = ({ artifact: e }) => {
+            const { setOpenArtifact: t } = (0, r.useContext)($e),
+                [n, a] = (0, r.useState)(!1);
+            return r.createElement(
+                "div",
+                { className: "flex-1 relative" },
+                r.createElement(
+                    "div",
+                    {
+                        className:
+                            "sidepanel-container absolute right-0 bottom-0 h-5/6 md:w-[calc(50vw-2.5rem)] flex flex-col transform transition-all ease-in-out rounded-xl",
+                    },
+                    r.createElement(
+                        "div",
+                        {
+                            className:
+                                "sidepannel-header flex items-center justify-between p-4 border-b",
+                        },
+                        r.createElement(
+                            "div",
+                            { className: "flex-1 min-w-0" },
+                            r.createElement(
+                                "h2",
+                                { className: "font-semibold" },
+                                e.title,
+                            ),
+                            r.createElement(
+                                "p",
+                                { className: "text-sm" },
+                                "ID: ",
+                                e.identifier,
+                            ),
+                        ),
+                        r.createElement(
+                            "div",
+                            { className: "flex items-center gap-2 ml-4" },
+                            r.createElement(
+                                "button",
+                                {
+                                    onClick: () => {
+                                        navigator.clipboard.writeText(
+                                            e.content,
+                                        ),
+                                            a(!0),
+                                            setTimeout(() => a(!1), 2e3);
+                                    },
+                                    className:
+                                        "sidepanel-button p-2 rounded-md transition-colors",
+                                    title: "Copy content",
+                                },
+                                r.createElement(Xe, { size: 16 }),
+                                r.createElement(
+                                    "span",
+                                    { className: "sr-only" },
+                                    "Copy content",
+                                ),
+                            ),
+                            r.createElement(
+                                "button",
+                                {
+                                    onClick: () => t(!1),
+                                    className:
+                                        "sidepanel-button p-2 rounded-md transition-colors",
+                                    title: "Close",
+                                },
+                                r.createElement(Ge, { size: 16 }),
+                                r.createElement(
+                                    "span",
+                                    { className: "sr-only" },
+                                    "Close",
+                                ),
+                            ),
+                        ),
+                    ),
+                    r.createElement(
+                        "div",
+                        { className: "flex-1 overflow-auto p-4" },
+                        (() => {
+                            switch (e.type) {
+                                case "application/vnd.ant.code":
+                                    return r.createElement(Je, {
+                                        content: e.content,
+                                    });
+                                case "text/markdown":
+                                    return r.createElement(Ze, {
+                                        content: e.content,
+                                    });
+                                case "image/svg+xml":
+                                    return r.createElement(et, {
+                                        content: e.content,
+                                    });
+                                default:
+                                    return null;
+                            }
+                        })(),
+                    ),
+                    n &&
+                        r.createElement(
+                            "div",
+                            {
+                                className:
+                                    "absolute bottom-4 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-2 rounded-md",
+                            },
+                            "Copied to clipboard!",
+                        ),
+                ),
+            );
+        },
+        nt = ({ children: e }) => {
+            const [t, n] = (0, r.useState)(null);
+            return r.createElement(
+                $e.Provider,
+                { value: { openArtifact: t, setOpenArtifact: n } },
+                r.createElement(
+                    "div",
+                    { className: "flex h-screen " + (t ? "ml-16" : "ml-0]") },
+                    r.createElement(
+                        "div",
+                        {
+                            className:
+                                "flex-1 overflow-auto transition-all duration-300 ease-in-out " +
+                                (t ? "w-7/12" : "w-full"),
+                        },
+                        e,
+                    ),
+                    t && r.createElement(tt, { artifact: t }),
+                ),
+            );
+        },
+        rt = ({ initialThreadId: e }) => {
             const [t, n] = (0, r.useState)(null),
                 [a, l] = (0, r.useState)([]),
                 o = Y();
@@ -16649,77 +16688,85 @@
             return r.createElement(
                 "div",
                 { className: "relative w-full" },
-                r.createElement(Ge, null),
+                r.createElement(Ye, null),
                 r.createElement(
-                    "div",
-                    {
-                        className:
-                            "chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4 min-h-screen",
-                    },
+                    nt,
+                    null,
                     r.createElement(
                         "div",
                         {
                             className:
-                                "chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8",
+                                "chat-container flex flex-col items-center w-full max-w-3xl mx-auto px-4 min-h-screen",
                         },
                         r.createElement(
                             "div",
                             {
                                 className:
-                                    "relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2",
+                                    "chat-main relative flex w-full flex-1 overflow-x-hidden overflow-y-scroll pt-6 md:pr-8",
                             },
                             r.createElement(
                                 "div",
                                 {
                                     className:
-                                        "flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1",
+                                        "relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2",
                                 },
-                                a.map((e) =>
-                                    e.is_bot
-                                        ? r.createElement(Ye, {
-                                              message: e.content,
-                                          })
-                                        : r.createElement(De, {
-                                              message: e.content,
-                                          }),
+                                r.createElement(
+                                    "div",
+                                    {
+                                        className:
+                                            "flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1",
+                                    },
+                                    a.map((e) =>
+                                        e.is_bot
+                                            ? r.createElement(Qe, {
+                                                  message: e.content,
+                                              })
+                                            : r.createElement(De, {
+                                                  message: e.content,
+                                              }),
+                                    ),
                                 ),
                             ),
                         ),
-                    ),
-                    r.createElement(
-                        "div",
-                        {
-                            className:
-                                "message-input sticky bottom-0 mx-auto w-full pt-6",
-                        },
-                        r.createElement(Me, {
-                            onSubmit: async (e) => {
-                                if (!e.trim() || !t) return;
-                                console.log(t.id);
-                                const n = await fetch("/app/api/messages/", {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify({
-                                            content: e.trim(),
-                                            thread: t.id,
-                                        }),
-                                    }),
-                                    r = await n.json();
-                                l([...a, ...r]);
+                        r.createElement(
+                            "div",
+                            {
+                                className:
+                                    "message-input sticky bottom-0 mx-auto w-full pt-6",
                             },
-                        }),
+                            r.createElement(Me, {
+                                onSubmit: async (e) => {
+                                    if (!e.trim() || !t) return;
+                                    console.log(t.id);
+                                    const n = await fetch(
+                                            "/app/api/messages/",
+                                            {
+                                                method: "POST",
+                                                headers: {
+                                                    "Content-Type":
+                                                        "application/json",
+                                                },
+                                                body: JSON.stringify({
+                                                    content: e.trim(),
+                                                    thread: t.id,
+                                                }),
+                                            },
+                                        ),
+                                        r = await n.json();
+                                    l([...a, ...r]);
+                                },
+                            }),
+                        ),
                     ),
                 ),
             );
         },
-        Ze = () => {
+        at = () => {
             const e = Y();
             return r.createElement(
                 "div",
                 { className: "flex min-h-screen w-full" },
-                r.createElement(Ge, null),
+                r.createElement(Ye, null),
                 r.createElement(
                     "main",
                     { className: "flex-1 pl-[4.5rem]" },
@@ -16790,45 +16837,45 @@
                 ),
             );
         };
-    var et = n(72),
-        tt = n.n(et),
-        nt = n(825),
-        rt = n.n(nt),
-        at = n(659),
-        lt = n.n(at),
-        ot = n(56),
-        it = n.n(ot),
-        ut = n(159),
-        st = n.n(ut),
-        ct = n(113),
-        dt = n.n(ct),
-        ft = n(992),
-        pt = {};
-    (pt.styleTagTransform = dt()),
-        (pt.setAttributes = it()),
-        (pt.insert = lt().bind(null, "head")),
-        (pt.domAPI = rt()),
-        (pt.insertStyleElement = st()),
-        tt()(ft.A, pt),
-        ft.A && ft.A.locals && ft.A.locals;
-    var mt = n(321),
-        ht = {};
-    (ht.styleTagTransform = dt()),
-        (ht.setAttributes = it()),
-        (ht.insert = lt().bind(null, "head")),
-        (ht.domAPI = rt()),
-        (ht.insertStyleElement = st()),
-        tt()(mt.A, ht),
-        mt.A && mt.A.locals && mt.A.locals;
-    const gt = () => {
+    var lt = n(72),
+        ot = n.n(lt),
+        it = n(825),
+        ut = n.n(it),
+        st = n(659),
+        ct = n.n(st),
+        dt = n(56),
+        ft = n.n(dt),
+        pt = n(159),
+        mt = n.n(pt),
+        ht = n(113),
+        gt = n.n(ht),
+        yt = n(992),
+        vt = {};
+    (vt.styleTagTransform = gt()),
+        (vt.setAttributes = ft()),
+        (vt.insert = ct().bind(null, "head")),
+        (vt.domAPI = ut()),
+        (vt.insertStyleElement = mt()),
+        ot()(yt.A, vt),
+        yt.A && yt.A.locals && yt.A.locals;
+    var bt = n(321),
+        wt = {};
+    (wt.styleTagTransform = gt()),
+        (wt.setAttributes = ft()),
+        (wt.insert = ct().bind(null, "head")),
+        (wt.domAPI = ut()),
+        (wt.insertStyleElement = mt()),
+        ot()(bt.A, wt),
+        bt.A && bt.A.locals && bt.A.locals;
+    const kt = () => {
             const { threadId: e } = (function () {
                 let { matches: e } = r.useContext(B),
                     t = e[e.length - 1];
                 return t ? t.params : {};
             })();
-            return r.createElement(Je, { initialThreadId: e });
+            return r.createElement(rt, { initialThreadId: e });
         },
-        yt = () =>
+        St = () =>
             r.createElement(
                 Pe,
                 null,
@@ -16837,14 +16884,14 @@
                     null,
                     r.createElement(oe, {
                         path: "/t/:threadId",
-                        element: r.createElement(gt, null),
+                        element: r.createElement(kt, null),
                     }),
                     r.createElement(oe, {
                         path: "/",
-                        element: r.createElement(Ze, null),
+                        element: r.createElement(at, null),
                     }),
                 ),
             ),
-        vt = document.getElementById("root");
-    (0, a.createRoot)(vt).render(r.createElement(yt, null));
+        xt = document.getElementById("root");
+    (0, a.createRoot)(xt).render(r.createElement(St, null));
 })();

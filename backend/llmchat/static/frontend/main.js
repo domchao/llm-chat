@@ -13,7 +13,7 @@
                     o = n.n(l)()(a());
                 o.push([
                     e.id,
-                    ":root {\n    --primary-color: #adf0d4;\n    --secondary-color: #1fd8a4;\n    --bg-color: #0d1512;\n    --bg-lighter: #1b2c26;\n    --bg-darker: #020303;\n}\n\nbody {\n    background: var(--bg-color);\n    color: var(--primary-color);\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    gap: 36px;\n    padding: 14px;\n}\n\n.initial-input {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-user {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-bot {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n}\n\n.artifact-button {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.sidepanel-container {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n    \n}\n\n.sidepannel-header {\n    border-color: var(--bg-color);\n}\n\n.sidepanel-button:hover {\n    background: var(--bg-color);\n}\n\n.sidepanel-code-renderer {\n    background: var(--bg-color);\n}",
+                    ":root {\n    --primary-color: #adf0d4;\n    --secondary-color: #1fd8a4;\n    --bg-color: #0d1512;\n    --bg-lighter: #1b2c26;\n    --bg-darker: #020303;\n}\n\nbody {\n    background: var(--bg-color);\n    color: var(--primary-color);\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    gap: 36px;\n    padding: 14px;\n}\n\n.initial-input {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-user {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.message-container-bot {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n}\n\n.artifact-button {\n    background: var(--bg-darker);\n    color: var(--primary-color);\n}\n\n.sidepanel-container {\n    background: var(--bg-lighter);\n    color: var(--secondary-color);\n}\n\n.sidepannel-header {\n    border-color: var(--bg-color);\n}\n\n.sidepanel-button:hover {\n    background: var(--bg-color);\n}\n\n.sidepanel-code-renderer {\n    background: var(--bg-color);\n}\n",
                     "",
                 ]);
                 const i = o;
@@ -16290,12 +16290,12 @@
                     r.createElement(
                         "span",
                         null,
-                        "Open ",
+                        "Open",
+                        " ",
                         "application/vnd.ant.code" === e.type
                             ? "code"
                             : "artifact",
-                        ":",
-                        " ",
+                        ": ",
                         e.title,
                     ),
                 ),

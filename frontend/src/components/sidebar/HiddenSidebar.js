@@ -35,7 +35,7 @@ const Sidebar = () => {
                     </a>
                 </div>
                 <div
-                    className={`transition-opacity overflow-y-scroll duration-300 min-w-max ${contentOpacity}`}
+                    className={`transition-opacity overflow-y-scroll duration-300 min-w-0 w-full ${contentOpacity}`}
                 >
                     <ThreadList />
                 </div>

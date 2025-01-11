@@ -20,16 +20,15 @@ const ThreadList = () => {
     };
 
     return (
-        <div className="thread-list">
+        <div className="thread-list w-full">
             {threads.map((thread) => (
                 <div
-                    className="space-y-2 mt-4 hover:bg-black rounded-xl mx-auto px-3 py-2"
+                    className="space-y-2 mt-4 hover:bg-black rounded-xl px-3 py-2 w-full"
                     onClick={() => handleThreadSelect(thread)}
                 >
-                    <div className="flex items-center space-x-3">
-                        <span className="w-full">{thread.title}</span>
+                    <div className="flex items-center space-x-3 w-full">
+                        <span className="truncate min-w-0">{thread.title}</span>
                     </div>
-                    {/* <p>{thread.last_message?.content}</p> */}
                     <small>
                         {new Date(thread.last_message_at).toLocaleString()}
                     </small>

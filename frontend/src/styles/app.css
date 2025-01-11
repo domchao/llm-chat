@@ -4,6 +4,42 @@
     --bg-color: #0d1512;
     --bg-lighter: #1b2c26;
     --bg-darker: #020303;
+
+    /* Markdown variables and colours */
+    /* Base colors */
+    --markdown-text: var(--primary-color);
+    --markdown-heading: var(--secondary-color);
+    --markdown-link: var(--secondary-color);
+    --markdown-bold: var(--secondary-color);
+    --markdown-italic: var(--primary-color);
+
+    /* Code blocks */
+    --markdown-code: var(--secondary-color);
+    --markdown-code-bg: var(--bg-darker);
+    --markdown-block-bg: var(--bg-darker);
+
+    /* Blockquotes */
+    --markdown-blockquote: var(--bg-color);
+    --markdown-blockquote-border: var(--bg-color);
+
+    /* Borders & Lines */
+    --markdown-border: var(--bg-color);
+    --markdown-hr: var(--bg-color);
+
+    /* Lists */
+    --markdown-li: var(--primary-color);
+    --markdown-ol: var(--primary-color);
+    --markdown-ul: var(--primary-color);
+
+    /* Table variables */
+    --markdown-table-border: var(--bg-color);
+    --markdown-table-header-bg: var(--bg-color);
+    --markdown-table-header-text: var(--secondary-color);
+
+    /* Checkbox variables */
+    --markdown-checkbox-checked: var(--bg-color);
+    --markdown-checkbox-border: var(--secondary-color);
+    --markdown-checkbox-focus: var(--secondary-color);
 }
 
 body {

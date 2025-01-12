@@ -48,8 +48,8 @@ Add a type attribute to the opening <chatArtifact> tag to specify the type of co
   - The user interface can render single file HTML pages placed within the artifact tags. HTML, JS, and CSS should be in a single file when using the text/html type.
   - Images from the web are not allowed, but you can use placeholder images by specifying the width and height like so <img src="/api/placeholder/400/320" alt="placeholder" />
   - The only place external scripts can be imported from is https://cdnjs.cloudflare.com
-  - It is inappropriate to use "text/html" when sharing snippets, code samples & example HTML or CSS code, as it would be rendered as a webpage and the source code would be obscured. The assistant should instead use "application/vnd.ant.code" defined above.
-  - If the assistant is unable to follow the above requirements for any reason, use "application/vnd.ant.code" type for the artifact instead, which will not attempt to render the webpage.
+  - It is inappropriate to use "text/html" when sharing snippets, code samples & example HTML or CSS code, as it would be rendered as a webpage and the source code would be obscured. The assistant should instead use "application/vnd.code" defined above.
+  - If the assistant is unable to follow the above requirements for any reason, use "application/vnd.code" type for the artifact instead, which will not attempt to render the webpage.
 - If you are unable to follow the above requirements for any reason, use "application/vnd.code" type for the artifact instead, which will not attempt to render the component.
 
 Here are some examples of correct usage of artifacts by other AI assistants:
@@ -87,7 +87,7 @@ This example shows how to update an existing artifact and reference it in the re
 <assistant_response>
 Good point! It's important to handle invalid input to prevent errors. I'll update the script to include input validation.
 
-<chatArtifact identifier="factorial-script" type="application/vnd.ant.code" language="python" title="Simple Python factorial script">
+<chatArtifact identifier="factorial-script" type="application/vnd.code" language="python" title="Simple Python factorial script">
 def factorial(n):
    if n == 0:
        return 1

@@ -12,7 +12,7 @@ export const SidePanel = ({ artifact }) => {
 
     const renderContent = () => {
         switch (artifact.type) {
-            case "application/vnd.ant.code":
+            case "application/vnd.code":
                 return <CodeRenderer content={artifact.content} />;
             case "text/markdown":
                 return <MarkdownRenderer content={artifact.content} />;

@@ -11,7 +11,7 @@ const ArtifactButton = ({ artifact, onOpen }) => {
                 <ExternalLink size={16} />
                 <span>
                     Open{" "}
-                    {artifact.type === "application/vnd.ant.code"
+                    {artifact.type === "application/vnd.code"
                         ? "code"
                         : "artifact"}
                     : {artifact.title}

@@ -79,6 +79,43 @@ clean:
 
 
 ################
+### Docker   ###
+################
+
+# Variables
+IMAGE_NAME := llm-chat
+IMAGE_TAG := latest
+CONTAINER_NAME := llm-chat-app
+
+# Build Docker image
+docker-build:
+	@echo "Building Docker image..."
+	docker build -t $(IMAGE_NAME):$(IMAGE_TAG) .
+
+# Run Docker container
+docker-run:
+	@echo "Running Docker container..."
+	docker run -d -p 8080:8080 --name $(CONTAINER_NAME) --env-file backend/.env $(IMAGE_NAME):$(IMAGE_TAG)
+
+# Stop Docker container
+docker-stop:
+	@echo "Stopping Docker container..."
+	docker stop $(CONTAINER_NAME) || true
+	docker rm $(CONTAINER_NAME) || true
+
+# View logs
+docker-logs:
+	@echo "Viewing Docker logs..."
+	docker logs -f $(CONTAINER_NAME)
+
+# Clean Docker resources
+docker-clean: docker-stop
+	@echo "Removing Docker image..."
+	docker rmi $(IMAGE_NAME):$(IMAGE_TAG) || true
+
+
+
+################
 ### Help     ###
 ################
 help:
@@ -96,4 +133,11 @@ help:
 	@echo "  make database-delete   - Delete database"
 	@echo "  make database-reset    - Delete database and rebuild"
 	@echo "  make clean             - Remove compiled files and caches"
+	@echo "Docker:"
+	@echo "  make docker-build      - Build Docker image"
+	@echo "  make docker-run        - Run Docker container"
+	@echo "  make docker-stop       - Stop and remove Docker container"
+	@echo "  make docker-logs       - View Docker container logs"
+	@echo "  make docker-clean      - Remove Docker image and container"
+	@echo "Help:"
 	@echo "  make help              - Display this help message"

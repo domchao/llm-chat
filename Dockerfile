@@ -6,6 +6,9 @@ RUN addgroup -S app && \
     apk update && \
     apk upgrade
 
+# Install Node.js and npm for Claude Code CLI
+RUN apk add --no-cache nodejs npm
+
 # Python
 RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir --upgrade setuptools && \
@@ -13,6 +16,9 @@ RUN pip3 install --no-cache-dir --upgrade pip && \
     # Cleanup
     echo "Cleaning up..." && \
     rm -vrf /var/cache/apk/*
+
+# Install Claude Code CLI globally
+RUN npm install -g @anthropic-ai/claude-code
 
 # Poetry
 RUN POETRY_NO_INTERACTION=1 \

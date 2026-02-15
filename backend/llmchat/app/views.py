@@ -65,13 +65,16 @@ class MessageViewSet(viewsets.ModelViewSet):
         conversation_history = self._parse_message_queryset(messages_queryset)
 
         # Call Claude Agent SDK (system prompt separate from messages)
-        response = claude_agent_chat(
+        response_data = claude_agent_chat(
             messages=conversation_history, system_prompt=ARTIFACTS_SYSTEM_MESSAGE
         )
 
-        # Create bot response in the thread
+        # Create bot response in the thread with tool calls
         bot_response = Message.objects.create(
-            thread=thread, content=response, is_bot=True
+            thread=thread,
+            content=response_data["text"],
+            tool_calls=response_data.get("tool_calls", []),
+            is_bot=True,
         )
 
         # Update thread's last_message_at

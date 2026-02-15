@@ -23,6 +23,7 @@ class Message(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     is_bot = models.BooleanField(default=False)
     message_index = models.PositiveIntegerField(editable=False)
+    tool_calls = models.JSONField(null=True, blank=True, default=list)
 
     class Meta:
         ordering = ["timestamp"]

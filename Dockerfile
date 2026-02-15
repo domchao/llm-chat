@@ -28,11 +28,23 @@ RUN POETRY_NO_INTERACTION=1 \
 
 WORKDIR /app
 
+# Build frontend first
+COPY frontend/package.json frontend/package-lock.json /app/frontend/
+WORKDIR /app/frontend
+RUN npm ci
+
+COPY frontend/ /app/frontend/
+COPY backend/llmchat/ /app/backend/llmchat/
+RUN npm run build
+
+# Setup backend
+WORKDIR /app
 COPY backend/poetry.lock backend/pyproject.toml /app/
 
 RUN poetry config virtualenvs.in-project true && \
     poetry install --no-root && poetry update setuptools && rm -rf $POETRY_CACHE_DIR
 
+# Copy backend files (frontend build output is already in place)
 COPY backend/llmchat/ /app/
 
 RUN poetry install && \

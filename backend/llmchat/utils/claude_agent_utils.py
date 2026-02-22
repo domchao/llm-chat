@@ -7,6 +7,7 @@ future enhancements (tool calling, subagents, etc.).
 """
 
 import asyncio
+import logging
 from typing import Dict, List, Optional
 
 from claude_agent_sdk import ClaudeAgentOptions, query
@@ -18,6 +19,8 @@ from claude_agent_sdk.types import (
     ToolUseBlock,
     UserMessage,
 )
+
+logger = logging.getLogger(__name__)
 
 
 def claude_agent_chat(
@@ -71,16 +74,36 @@ async def _async_chat(prompt: str, system_prompt: str) -> dict:
 
     Configures the agent with tool support:
     - WebSearch and WebFetch tools enabled
+    - Skill tool enabled for Agent Skills
     - Multi-turn for automatic tool execution
     - Bypass permissions (no approvals needed)
 
     Returns:
         Dictionary with 'text' and 'tool_calls' keys
     """
+    import os
+
+    # Get backend directory for Skills location
+    # In Docker: /app/ (with skills at /app/.claude/skills/)
+    # In local dev: /Users/.../backend/llmchat/ (with skills at /Users/.../backend/.claude/skills/)
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Check if we're in Docker (file is at /app/utils/)
+    # or local dev (file is in backend/llmchat/utils/)
+    if "/app" in current_dir and current_dir.startswith("/app"):
+        # Docker: use /app as cwd
+        backend_dir = "/app"
+    else:
+        # Local dev: navigate to backend directory (parent of llmchat)
+        # From backend/llmchat/utils -> backend
+        backend_dir = os.path.dirname(os.path.dirname(current_dir))
+
     options = ClaudeAgentOptions(
-        model="sonnet",  # Use short name for Claude Code CLI
+        model="haiku",  # Use short name for Claude Code CLI
         system_prompt=system_prompt,
-        allowed_tools=["WebSearch", "WebFetch"],  # Enable web tools
+        cwd=backend_dir,  # Enable project Skills from .claude/skills/
+        setting_sources=["project"],  # Load Skills from project directory
+        allowed_tools=["WebSearch", "WebFetch", "Skill"],  # Enable web tools and Skills
         max_turns=10,  # Allow multi-turn for automatic tool execution
         permission_mode="bypassPermissions",  # No approval prompts
     )

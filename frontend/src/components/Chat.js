@@ -72,7 +72,7 @@ const Chat = ({ initialThreadId }) => {
                             <div className="flex-1 flex flex-col gap-3 px-4 max-w-3xl mx-auto w-full pt-1">
                                 {messages.map((message) =>
                                     message.is_bot ? (
-                                        <BotMessage message={message.content} />
+                                        <BotMessage message={message} />
                                     ) : (
                                         <UserMessage
                                             message={message.content}

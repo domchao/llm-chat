@@ -3,7 +3,8 @@ from pydantic import BaseModel
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from utils import ARTIFACTS_SYSTEM_MESSAGE, openai_llm_call
+from utils import ARTIFACTS_SYSTEM_MESSAGE
+from utils.claude_agent_utils import claude_agent_chat
 
 from .models import Message, Thread
 from .serializers import MessageSerializer, ThreadSerializer
@@ -43,7 +44,7 @@ class MessageViewSet(viewsets.ModelViewSet):
             for message in queryset_messages
         ]
         # Only send last N messages
-        return messages[-5:]
+        return messages[-20:]  # Send last 20 messages (Claude has large context window)
 
     def create(self, request):
         thread_id = request.data.get("thread")
@@ -63,17 +64,17 @@ class MessageViewSet(viewsets.ModelViewSet):
 
         conversation_history = self._parse_message_queryset(messages_queryset)
 
-        messages = [
-            {"role": "system", "content": ARTIFACTS_SYSTEM_MESSAGE},
-            *conversation_history,
-        ]
+        # Call Claude Agent SDK (system prompt separate from messages)
+        response_data = claude_agent_chat(
+            messages=conversation_history, system_prompt=ARTIFACTS_SYSTEM_MESSAGE
+        )
 
-        # Call OpenAI API
-        response = openai_llm_call(messages)
-
-        # Create bot response in the thread
+        # Create bot response in the thread with tool calls
         bot_response = Message.objects.create(
-            thread=thread, content=response, is_bot=True
+            thread=thread,
+            content=response_data["text"],
+            tool_calls=response_data.get("tool_calls", []),
+            is_bot=True,
         )
 
         # Update thread's last_message_at

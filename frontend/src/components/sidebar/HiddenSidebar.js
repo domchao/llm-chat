@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ThreadList from "./Threadlist";
+import ThreadList from "./ThreadList";
 
 const Sidebar = () => {
     const [isExpanded, setIsExpanded] = useState(false);

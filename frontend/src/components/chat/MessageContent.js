@@ -1,5 +1,6 @@
 import React from "react";
 import ArtifactViewer from "../artifact/ArtifactViewer";
+import ToolCallViewer from "./ToolCallViewer";
 
 const parseMessageContent = (content) => {
     if (!content) return [{ type: "text", content: "" }];
@@ -65,11 +66,24 @@ const parseMessageContent = (content) => {
     }
 };
 
-const MessageContent = ({ content }) => {
+const MessageContent = ({ content, toolCalls = [] }) => {
     const parts = React.useMemo(() => parseMessageContent(content), [content]);
 
     return (
         <div className="message-content">
+            {/* Render tool calls first */}
+            {toolCalls && toolCalls.length > 0 && (
+                <div className="tool-calls-section mb-2">
+                    {toolCalls.map((toolCall, index) => (
+                        <ToolCallViewer
+                            key={toolCall.id || index}
+                            toolCall={toolCall}
+                        />
+                    ))}
+                </div>
+            )}
+
+            {/* Render text and artifacts */}
             {parts.map((part, index) => {
                 if (part.type === "artifact") {
                     return (

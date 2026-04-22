@@ -22,11 +22,11 @@ def openai_llm_call(message_list):
     return completion.choices[0].message.content
 
 
-def anthropic_llm_call(message_list):
+def anthropic_llm_call(message_list, system_message=None):
     """
     Message list formatted as [{"role": "user" or "assistant", "content": "message"}]
     """
-    MODEL = "claude-3-5-sonnet-20241022"
+    MODEL = "claude-haiku-4-5-20251001"
 
     client = anthropic.Anthropic(
         # defaults to os.environ.get("ANTHROPIC_API_KEY")
@@ -36,5 +36,6 @@ def anthropic_llm_call(message_list):
         model=MODEL,
         messages=message_list,
         max_tokens=2048,
+        system=system_message if system_message else None,
     )
     return message.content[0].text

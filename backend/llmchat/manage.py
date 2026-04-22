@@ -3,6 +3,15 @@
 import os
 import sys
 
+import overmind_sdk
+from dotenv import load_dotenv
+
+load_dotenv()
+
+overmind_sdk.init(
+    service_name="my-service", overmind_api_key=os.environ["OVERMIND_API_KEY"]
+)
+
 
 def main():
     """Run administrative tasks."""

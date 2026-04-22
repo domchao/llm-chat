@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from utils import ARTIFACTS_SYSTEM_MESSAGE, openai_llm_call
+from utils import ARTIFACTS_SYSTEM_MESSAGE, anthropic_llm_call
 
 from .models import Message, Thread
 from .serializers import MessageSerializer, ThreadSerializer
@@ -64,12 +64,11 @@ class MessageViewSet(viewsets.ModelViewSet):
         conversation_history = self._parse_message_queryset(messages_queryset)
 
         messages = [
-            {"role": "system", "content": ARTIFACTS_SYSTEM_MESSAGE},
             *conversation_history,
         ]
 
         # Call OpenAI API
-        response = openai_llm_call(messages)
+        response = anthropic_llm_call(messages, ARTIFACTS_SYSTEM_MESSAGE)
 
         # Create bot response in the thread
         bot_response = Message.objects.create(

@@ -30,13 +30,13 @@ You can create and reference artifacts during conversations. Artifacts are for s
 
 # Artifact instructions
 
-Wrap the content in opening and closing <chatArtifact> tags.
+Wrap the content in opening and closing <artifact> tags.
 
-Assign an identifier to the identifier attribute of the opening <chatArtifact> tag. For updates, reuse the prior identifier. For new artifacts, the identifier should be descriptive and relevant to the content, using kebab-case (e.g., "example-code-snippet"). This identifier will be used consistently throughout the artifact's lifecycle, even when updating or iterating on the artifact.
+Assign an identifier to the identifier attribute of the opening <artifact> tag. For updates, reuse the prior identifier. For new artifacts, the identifier should be descriptive and relevant to the content, using kebab-case (e.g., "example-code-snippet"). This identifier will be used consistently throughout the artifact's lifecycle, even when updating or iterating on the artifact.
 
-Include a title attribute in the <chatArtifact> tag to provide a brief title or description of the content.
+Include a title attribute in the <artifact> tag to provide a brief title or description of the content.
 
-Add a type attribute to the opening <chatArtifact> tag to specify the type of content the artifact represents. Assign one of the following values to the type attribute:
+Add a type attribute to the opening <artifact> tag to specify the type of content the artifact represents. Assign one of the following values to the type attribute:
 
 - Code: "application/vnd.code"
   - Use for code snippets or scripts in any programming language.
@@ -64,7 +64,7 @@ This example demonstrates how to create a new artifact and reference it in the r
 Sure! Here's a Python script that calculates the factorial of a number:
 
 
-<chatArtifact identifier="factorial-script" type="application/vnd.code" language="python" title="Simple Python factorial script">
+<artifact identifier="factorial-script" type="application/vnd.code" language="python" title="Simple Python factorial script">
 def factorial(n):
    if n == 0:
        return 1
@@ -72,7 +72,7 @@ def factorial(n):
        return n * factorial(n - 1)
 
 ...
-</chatArtifact>
+</artifact>
 </assistant_response>
 
 </example>
@@ -87,7 +87,7 @@ This example shows how to update an existing artifact and reference it in the re
 <assistant_response>
 Good point! It's important to handle invalid input to prevent errors. I'll update the script to include input validation.
 
-<chatArtifact identifier="factorial-script" type="application/vnd.code" language="python" title="Simple Python factorial script">
+<artifact identifier="factorial-script" type="application/vnd.code" language="python" title="Simple Python factorial script">
 def factorial(n):
    if n == 0:
        return 1
@@ -104,6 +104,6 @@ while true:
        print("Invalid input. Please enter a non-negative integer.")
 
 ...
-</chatArtifact>
+</artifact>
 </assistant_response>
 """

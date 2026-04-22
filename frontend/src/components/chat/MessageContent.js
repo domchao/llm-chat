@@ -6,7 +6,7 @@ const parseMessageContent = (content) => {
 
     const parts = [];
     let currentIndex = 0;
-    const artifactRegex = /<chatArtifact\s+([^>]*)>([\s\S]*?)<\/chatArtifact>/g;
+    const artifactRegex = /<artifact\s+([^>]*)>([\s\S]*?)<\/artifact>/g;
 
     try {
         // Convert string to String object to ensure matchAll is available

@@ -16343,8 +16343,7 @@
                         if (!e) return [{ type: "text", content: "" }];
                         const t = [];
                         let n = 0;
-                        const r =
-                            /<chatArtifact\s+([^>]*)>([\s\S]*?)<\/chatArtifact>/g;
+                        const r = /<artifact\s+([^>]*)>([\s\S]*?)<\/artifact>/g;
                         try {
                             const a = String(e),
                                 o = Array.from(a.matchAll(r));
